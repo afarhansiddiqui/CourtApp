@@ -43,11 +43,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>IndexModel.resx</DependentUpon>
     </Compile>
-    <Compile Update="Resources\Pages\ReportModel.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>ReportModel.resx</DependentUpon>
-    </Compile>
     <Compile Update="Resources\Pages\ReviewModel.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -91,11 +86,6 @@
     <EmbeddedResource Update="Resources\Pages\IndexModel.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>IndexModel.Designer.cs</LastGenOutput>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Pages\ReportModel.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>ReportModel.Designer.cs</LastGenOutput>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\Pages\ReviewModel.en.resx">

@@ -31,12 +31,6 @@
     <EmbeddedResource Update="Resources\Pages\IndexModel.fr.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Pages\ReportModel.en.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Pages\ReportModel.fr.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Update="Resources\Pages\ResultModel.en.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>

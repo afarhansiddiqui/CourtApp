@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebRazor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d7ad178a2e461c895f5d7319520e58ba153c1b83")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebRazor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebRazor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
