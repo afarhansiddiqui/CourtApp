@@ -1,0 +1,60 @@
+/* Full-page background */
+.bg-page {
+  position: relative;
+  min-height: 100vh;
+  background-image: url('../images/bg.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Overlay for contrast */
+.bg-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+/* Content above overlay */
+.page-content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+}
+
+/* Main Text Heading and sub heading */
+.text-content {
+  background-color: rgba(4, 11, 79, 0.54);
+  max-width: 1500px;
+  border-radius: 0.5rem;
+  padding: 5rem;
+  text-align: center;
+}
+
+/* Bottom-left button group */
+.bottom-left-buttons {
+  position: absolute;
+  left: 15rem;
+  bottom: 1rem;
+  z-index: 2;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* Responsive small-screen behavior */
+@media (max-width: 420px) {
+  .bottom-left-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .bottom-left-buttons .btn {
+    width: 100%;
+  }
+}

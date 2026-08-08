@@ -1,0 +1,81 @@
+﻿@page
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IStringLocalizer<Report2Model> localizer
+@inject IHtmlLocalizer<Report2Model> htmlLocalizer
+@model Report2Model
+@{
+    ViewData["Title"] = "Home page";
+    if (HttpContext.Request.Query["culture"] == "fr")
+    {
+        CultureInfo.CurrentCulture = new CultureInfo("fr");
+        CultureInfo.CurrentUICulture = new CultureInfo("fr");
+        Response.Cookies.Append(
+            CookieRequestCultureProvider.DefaultCookieName,
+            CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(CultureInfo.CurrentCulture)),
+            new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
+        );
+    }
+    else if (HttpContext.Request.Query["culture"] == "en")
+    {
+        CultureInfo.CurrentCulture = new CultureInfo("en");
+        CultureInfo.CurrentUICulture = new CultureInfo("en");
+        Response.Cookies.Append(
+            CookieRequestCultureProvider.DefaultCookieName,
+            CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(CultureInfo.CurrentCulture)),
+            new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
+        );
+    }
+
+    var requestCultureFeature = HttpContext.Features.Get<IRequestCultureFeature>();
+    var requestCulture = requestCultureFeature.RequestCulture;
+    ViewData["Report2"] = localizer["Report2"];
+    ViewData["Select"] = localizer["Select"];
+    ViewData["Home"] = localizer["Home"];
+}
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="~/css/dashboard03.css">
+
+<nav id="wb-bc" property="breadcrumb">
+    <div class="container">
+        <breadcrumb></breadcrumb>
+    </div>
+</nav>
+
+<div class="text-center"><h3>@localizer["AppHeading"]<br /></h3></div>
+
+<div class="text-center"><h3>@localizer["Report2"]</h3></div>
+<form method="post">
+    <div style="text-align:center;">
+
+        <div id="reportContainer" style="width:100%;height:720px;margin:auto;"></div>
+        @* <iframe title="CAACS Stats" width="1140" height="541.25" src=https://app.powerbi.com/reportEmbed?reportId=6cbdb1b1-d102-42bb-91ad-98e64b98fe9f&autoAuth=true&ctid=27a5d574-e6ec-4416-b4df-691e1b546a01&actionBarEnabled=true frameborder="0" allowFullScreen="true"></iframe> *@
+
+    </div>
+
+    <span>
+        <a class="btn btn-secondary" asp-page="./Select">@localizer["Back"]</a>
+    </span>
+</form>
+
+<script src="https://cdn.jsdelivr.net/npm/powerbi-client/dist/powerbi.min.js"></script>
+
+<script>
+    var embedUrl = '@Model.EmbedUrl';
+    var embedToken = '@Model.EmbedToken';
+    var reportId = '@Model.ReportId';
+
+    var models = window['powerbi-client'].models;
+
+    var config = {
+        type: 'report',
+        tokenType: models.TokenType.Embed,
+        accessToken: embedToken,
+        embedUrl: embedUrl,
+        id: reportId
+    };
+
+    var container = document.getElementById('reportContainer');
+    powerbi.embed(container, config);
+</script>

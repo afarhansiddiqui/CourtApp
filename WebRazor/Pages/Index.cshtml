@@ -1,0 +1,74 @@
+﻿@page
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IStringLocalizer<ReviewModel> localizer
+@inject IHtmlLocalizer<ReviewModel> htmlLocalizer
+@model IndexModel
+
+@{
+    Layout = null;
+    ViewData["Title"] = "App";
+    if (HttpContext.Request.Query["culture"] == "fr")
+    {
+        CultureInfo.CurrentCulture = new CultureInfo("fr");
+        CultureInfo.CurrentUICulture = new CultureInfo("fr");
+        Response.Cookies.Append(
+            CookieRequestCultureProvider.DefaultCookieName,
+            CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(CultureInfo.CurrentCulture)),
+            new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
+        );
+    }
+    else if (HttpContext.Request.Query["culture"] == "en")
+    {
+        CultureInfo.CurrentCulture = new CultureInfo("en");
+        CultureInfo.CurrentUICulture = new CultureInfo("en");
+        Response.Cookies.Append(
+            CookieRequestCultureProvider.DefaultCookieName,
+            CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(CultureInfo.CurrentCulture)),
+            new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
+        );
+    }
+
+    var requestCultureFeature = HttpContext.Features.Get<IRequestCultureFeature>();
+    var requestCulture = requestCultureFeature.RequestCulture;
+    ViewData["Home"] = localizer["Home"];
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>App</title>
+    <!-- Bootstrap CSS -->
+    <link href="~/lib/bootstrap-5.3.8-dist/css/bootstrap.css" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="~/css/dashboard01.css">
+    <link rel="stylesheet" href="~/css/site.css">
+</head>
+
+<body>
+
+    <main class="bg-page">
+        <div class="page-content text-white text-center">
+            <div class="text-content">
+                <h1 class="display-5">
+                    Court Application (App)
+                </h1>
+                <br/>
+                <h1 class="display-5">
+                    Application Courts (App)
+                </h1>
+                <!-- <p class="lead">Background image with bottom-left buttons.</p> -->
+            </div>
+        </div>
+
+        <div class="bottom-left-buttons">
+            <a href="Select/?culture=en" class="btn btn-primary">English</a>
+            <a href="Select/?culture=fr" class="btn btn-outline-light">Français</a>
+            <p class="align-right" style="color:aliceblue">Version#1.0.13</p>
+        </div>
+    </main>
+
+</body>
+
+</html>

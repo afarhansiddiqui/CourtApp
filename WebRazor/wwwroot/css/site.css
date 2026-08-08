@@ -1,0 +1,182 @@
+.span-break {
+    display: block;
+}
+
+.error-color {
+    background-color: #f3e9e8;
+    font-family: Segoe UI,Times,Times New Roman,serif;
+    font-size: 12px;
+}
+
+.error {
+    background-color: #f3e9e8;
+    font-family: Segoe UI,Times,Times New Roman,serif;
+    font-size: 12px;
+}
+
+.square-bttn {
+    background-color: dodgerblue;
+    padding: 32px 16px;
+}
+
+.section-color {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border: 2px solid #dee2e6;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.tooltip-container {
+    display: inline-block;
+    position: relative;
+}
+
+.tooltip-content {
+    visibility: hidden;
+    width: 800px;
+    background-color: lightgrey;
+    color: black;
+    text-align: left;
+    border-radius: 6px;
+    padding: 5px 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -450px;
+    font-size: 16px;
+    border: 5px solid black;
+}
+
+.tooltip-container:hover .tooltip-content {
+    visibility: visible;
+}
+
+.light-tooltip {
+    --bs-tooltip-bg: #e9ecef;
+    --bs-tooltip-color: #212529;
+    /* optional: keep Bootstrap happy */
+    --bs-tooltip-arrow-color: transparent;
+}
+
+    /* remove arrow completely */
+    .light-tooltip .tooltip-arrow {
+        display: none !important;
+    }
+
+    /* make it look like a floating card */
+    .light-tooltip .tooltip-inner {
+        background-color: #e9ecef;
+        color: #212529;
+        border: 1px solid #ced4da;
+        border-radius: 8px;
+        max-width: min(500px, 90vw);
+        padding: 12px 16px;
+        font-size: 14px;
+        line-height: 1.5;
+        white-space: normal;
+        text-align: left;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+
+.align-right {
+    text-align: right;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.item {
+    color: #fff;
+}
+
+.d-none {
+    display: none;
+}
+
+.small-font {
+    font-size: 18px;
+}
+
+.cjc-btn-primary {
+    color: #fff;
+    background-color: #022A5E;
+    border-color: rgb(19.6082949309, 60.4147465438, 95.3917050691);
+}
+
+    .cjc-btn-primary:focus, .cjc-btn-primary.focus {
+        color: #fff;
+        background-color: rgb(28.3041474654, 87.2073732719, 137.6958525346);
+        border-color: black;
+    }
+
+    .cjc-btn-primary:hover {
+        color: #fff;
+        background-color: rgb(28.3041474654, 87.2073732719, 137.6958525346);
+        border-color: rgb(9.1732718894, 28.26359447, 44.6267281106);
+    }
+
+    .cjc-btn-primary:active, .cjc-btn-primary.active, .open > .cjc-btn-primary.dropdown-toggle {
+        color: #fff;
+        background-color: rgb(28.3041474654, 87.2073732719, 137.6958525346);
+        background-image: none;
+        border-color: rgb(9.1732718894, 28.26359447, 44.6267281106);
+    }
+
+        .cjc-btn-primary:active:hover, .cjc-btn-primary:active:focus, .cjc-btn-primary:active.focus, .cjc-btn-primary.active:hover, .cjc-btn-primary.active:focus, .cjc-btn-primary.active.focus, .open > .cjc-btn-primary.dropdown-toggle:hover, .open > .cjc-btn-primary.dropdown-toggle:focus, .open > .cjc-btn-primary.dropdown-toggle.focus {
+            color: #fff;
+            background-color: rgb(22.2170506912, 68.4525345622, 108.0829493088);
+            border-color: black;
+        }
+
+    .cjc-btn-primary.disabled:hover, .cjc-btn-primary.disabled:focus, .cjc-btn-primary.disabled.focus, .cjc-btn-primary[disabled]:hover, .cjc-btn-primary[disabled]:focus, .cjc-btn-primary[disabled].focus, fieldset[disabled] .cjc-btn-primary:hover, fieldset[disabled] .cjc-btn-primary:focus, fieldset[disabled] .cjc-btn-primary.focus {
+        background-color: #022A5E;
+        border-color: rgb(19.6082949309, 60.4147465438, 95.3917050691);
+    }
+
+    .cjc-btn-primary .badge {
+        color: #2572b4;
+        background-color: #fff;
+    }
+
+    .cjc-btn-primary:visited {
+        color: #fff;
+    }
+
+.cjc-blue-text {
+    color: blue;
+}
+
+.cjc-red-text {
+    color: red;
+}
+
+.tooltip-arrow,
+.red-tooltip + .tooltip > .tooltip-inner {
+    background-color: #f00;
+}
+
+.georgia-font {
+    font-family: Segoe UI,Times,Times New Roman,serif;
+    font-size: 18px;
+}
+
+.cjc-big-buttons {
+    width: 240px;
+    height: 100px;
+    text-align: center;
+    border-radius: 12px;
+    padding: 35px;
+    align-items: center;
+}
+
+.custom-link,
+.custom-link:hover,
+.custom-link:visited,
+.custom-link:active {
+    text-decoration: none;
+    color: white;
+}

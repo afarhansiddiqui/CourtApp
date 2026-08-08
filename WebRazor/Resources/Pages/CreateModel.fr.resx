@@ -1,0 +1,885 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="1_Heading" xml:space="preserve">
+    <value>Nombre d’appels, d’appels incidents, de renvois, de révisions de cautionnement et de contrôles judiciaires</value>
+  </data>
+  <data name="1_Info" xml:space="preserve">
+    <value>Un avis d’appel compte comme un seul appel déposé et un seul appel décidé, même si un certain nombre d’affaires connexes sont regroupées et entendues lors d’une seule audience (exemple : si 10 affaires sont regroupées et entendues ensemble, mais qu’elles font l’objet de 10 avis d’appel, cela compte comme 10 appels déposés et 10 appels décidés). Un avis d’appel qui comprend à la fois un appel concernant la décision sur la culpabilité et un avis d’appel concernant la décision sur la peine doit être compté comme deux appels, mais lorsque ces appels sont entendus en même temps ils doivent être comptés comme une seule audience. &lt;br/&gt;&lt;br/&gt;
+Si un appel a été abandonné ou radié au cours de l’année civile précédente et qu’il est réinscrit durant l’année civile en cours, il est compté comme un nouvel appel déposé. &lt;br/&gt;&lt;br/&gt;
+Les appels incidents doivent uniquement être compilés s’ils sont inscrits au rôle comme un appel distinct.</value>
+  </data>
+  <data name="1_1_4_Heading" xml:space="preserve">
+    <value>Nombre d’appels, d’appels incidents et de renvois civils et de contrôles judiciaires fermés par le greffier, le responsable de la gestion des dossiers ou le personnel autorisé ou par application des règles</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Retour</value>
+  </data>
+  <data name="CourtRequired" xml:space="preserve">
+    <value>Court is required</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Statistiques</value>
+  </data>
+  <data name="dob" xml:space="preserve">
+    <value>Date de naissance</value>
+  </data>
+  <data name="ErrorText" xml:space="preserve">
+    <value>Veuillez corriger les erreurs suivantes :</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>Prénom</value>
+  </data>
+  <data name="FirstNameRequired" xml:space="preserve">
+    <value>Le prénom est obligatoire</value>
+  </data>
+  <data name="FirstNameTwoChars" xml:space="preserve">
+    <value>Le prénom doit comporter au moins deux caractères</value>
+  </data>
+  <data name="FromDateRequired" xml:space="preserve">
+    <value>From Date is Required</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Accueil</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="LastNameRequired" xml:space="preserve">
+    <value>Le nom de famille est obligatoire</value>
+  </data>
+  <data name="LastNameTwoChars" xml:space="preserve">
+    <value>Le nom de famille doit comporter au moins deux caractères</value>
+  </data>
+  <data name="ReportingYearRequired" xml:space="preserve">
+    <value>Reporting Year is required</value>
+  </data>
+  <data name="Review" xml:space="preserve">
+    <value>Examen</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Sélectionner</value>
+  </data>
+  <data name="ToDateRequired" xml:space="preserve">
+    <value>To Date is required</value>
+  </data>
+  <data name="1_1_4_Info" xml:space="preserve">
+    <value>Les appels, appels  incidents et renvois civils et les contrôles judiciaires réglés par le greffier  incluent les constats de caducité délivrés par le greffier. </value>
+  </data>
+  <data name="hdgCreateheading1" xml:space="preserve">
+    <value>Application Courts (App)</value>
+  </data>
+  <data name="hdgDataEntryForm" xml:space="preserve">
+    <value>Formulaire de saisie de données</value>
+  </data>
+  <data name="Modal_Validation_Title" xml:space="preserve">
+    <value>Veuillez remplir les sections suivantes :</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Fermer</value>
+  </data>
+  <data name="Aria_Close" xml:space="preserve">
+    <value>Fermer</value>
+  </data>
+  <data name="Alert_DraftSavedSuccess" xml:space="preserve">
+    <value>Votre brouillon a été enregistré avec succès.</value>
+  </data>
+  <data name="Alert_DraftSavedFailed" xml:space="preserve">
+    <value>Enregistrement déjà sauvegardé.</value>
+  </data>
+  <data name="Modal_DraftFound_Title" xml:space="preserve">
+    <value>Formulaire provisoire</value>
+  </data>
+  <data name="Alert_DraftFound_AskLoad" xml:space="preserve">
+    <value>Une version provisoire du formulaire existe pour la cour et l'année de référence sélectionnées.
+Veuillez choisir l'une des options suivantes :</value>
+  </data>
+  <data name="Alert_RecordRetrievalFailed" xml:space="preserve">
+    <value>Veuillez vérifier votre connexion VPN.</value>
+  </data>
+  <data name="Alert_RecordDeleteFailed" xml:space="preserve">
+    <value>La suppression du dossier a échoué</value>
+  </data>
+  <data name="Sidebar_BasicInfo" xml:space="preserve">
+    <value>Nom de la cour et année de référence</value>
+  </data>
+  <data name="Sidebar_Tab1" xml:space="preserve">
+    <value>Tab 1 - Nombre d’appels, d’appels incidents, de renvois, de révisions de cautionnement et de contrôles judiciaires </value>
+  </data>
+  <data name="Sidebar_Tab2" xml:space="preserve">
+    <value>Tab 2 - Affaires civiles et criminelles décidées</value>
+  </data>
+  <data name="Sidebar_Tab3" xml:space="preserve">
+    <value>Tab 3 - Nombre total de décisions/jugements rendus sur le banc et mis en délibéré</value>
+  </data>
+  <data name="Sidebar_Tab4" xml:space="preserve">
+    <value>Tab 4 - Intervalles de temps pour les affaires civiles et criminelles</value>
+  </data>
+  <data name="Sidebar_Tab5" xml:space="preserve">
+    <value>Tab 5 - Nombre d’audiences en personne, virtuelles et hybrides</value>
+  </data>
+  <data name="Sidebar_Tab6" xml:space="preserve">
+    <value>Tab 6 - Nombre de requêtes et demandes</value>
+  </data>
+  <data name="Sidebar_Tab7" xml:space="preserve">
+    <value>Tab 7 - Personnes qui se représentent seules</value>
+  </data>
+  <data name="Sidebar_Tab8" xml:space="preserve">
+    <value>Tab 8 - Nombre de décisions/jugements rendus</value>
+  </data>
+  <data name="Sidebar_Tab9" xml:space="preserve">
+    <value>Tab 9 - Nombre d’appels qui sont entendus</value>
+  </data>
+  <data name="Sidebar_Tab10" xml:space="preserve">
+    <value>Tab 10 - Nombre total d’appels, d’appels incidents, de renvois, de révisions de cautionnement et de contrôles judiciaires qui sont en cours au 31 décembre</value>
+  </data>
+  <data name="Sidebar_Tab11" xml:space="preserve">
+    <value>Tab 11 - Nombre total de juges en date du 31 décembre</value>
+  </data>
+  <data name="Sidebar_Tab12" xml:space="preserve">
+    <value>Tab 12 - Commentaires additionnels et Révision des statistiques</value>
+  </data>
+  <data name="Btn_PreviousTab" xml:space="preserve">
+    <value>Onglet précédent </value>
+  </data>
+  <data name="Validation_FormIncomplete" xml:space="preserve">
+    <value>Formulaire incomplet : Tous les champs sont obligatoires. Veuillez entrer 0 pour indiquer qu’aucune donnée n’est soumise.</value>
+  </data>
+  <data name="Info_SidebarAppearsAfterBasicInfo" xml:space="preserve">
+    <value>Les onglets de la barre latérale apparaîtront une fois que vous aurez rempli les champs Nom de la cour et Année de référence.</value>
+  </data>
+  <data name="BasicInfo_SectionTitle" xml:space="preserve">
+    <value>Nom de la cour et année de référence</value>
+  </data>
+  <data name="Lbl_NameOfCourt" xml:space="preserve">
+    <value>Nom de la cour</value>
+  </data>
+  <data name="Tip_Court" xml:space="preserve">
+    <value>Le tribunal auquel s'applique la requête.</value>
+  </data>
+  <data name="Msg_NameOfCourt" xml:space="preserve">
+    <value>Tous les champs sont obligatoires. Veuillez entrer le nom de votre cour.</value>
+  </data>
+  <data name="Lbl_ReportingYear" xml:space="preserve">
+    <value>Année de référence</value>
+  </data>
+  <data name="Tip_ReportingYear" xml:space="preserve">
+    <value>L'année de référence pour les données.</value>
+  </data>
+  <data name="Msg_ReportingYear" xml:space="preserve">
+    <value>Tous les champs sont obligatoires. Veuillez entrer votre année de référence.</value>
+  </data>
+  <data name="Lbl_From" xml:space="preserve">
+    <value>De</value>
+  </data>
+  <data name="Tip_FromDate" xml:space="preserve">
+    <value>Date de début de la période couverte par la soumission. </value>
+  </data>
+  <data name="Msg_FromDate" xml:space="preserve">
+    <value>Veuillez entrer les dates qui correspondent à l’année de référence.</value>
+  </data>
+  <data name="Lbl_To" xml:space="preserve">
+    <value>À</value>
+  </data>
+  <data name="Tip_ToDate" xml:space="preserve">
+    <value>Date de fin de la période couverte par la soumission</value>
+  </data>
+  <data name="Msg_ToDate" xml:space="preserve">
+    <value>Veuillez entrer les dates qui correspondent à l’année de référence.</value>
+  </data>
+  <data name="Lbl_1_1_Title" xml:space="preserve">
+    <value>Appels, appels incidents et renvois civils et contrôles judiciaires (déposés, ayant fait l’objet d’un jugement ou d’une décision mettant fin au dossier et abandonnés ou retirés)</value>
+  </data>
+  <data name="Lbl_1_1_1" xml:space="preserve">
+    <value>Nombre d’appels, d’appels incidents et de renvois civils et de contrôles judiciaires déposés mais encore en cours au 31 décembre de l’année précédente.</value>
+  </data>
+  <data name="Msg_1_1_1" xml:space="preserve">
+    <value>Nombre d’appels, d’appels incidents et de renvois civils et de contrôles judiciaires déposés mais encore en cours au 31 décembre de l’année précédente.</value>
+  </data>
+  <data name="Lbl_1_1_2" xml:space="preserve">
+    <value>Nombre d’appels, d’appels incidents et de renvois civils et de contrôles judiciaires déposés </value>
+  </data>
+  <data name="Msg_1_1_2" xml:space="preserve">
+    <value>Nombre d’appels, d’appels incidents et de renvois civils et de contrôles judiciaires déposés </value>
+  </data>
+  <data name="Lbl_1_1_3" xml:space="preserve">
+    <value>Nombre d’appels, d’appels incidents et de renvois civils et de contrôles judiciaires ayant fait l’objet d’un jugement ou d’une décision mettant fin 	au dossier </value>
+  </data>
+  <data name="Msg_1_1_3" xml:space="preserve">
+    <value>Nombre d’appels, d’appels incidents et de renvois civils et de contrôles judiciaires ayant fait l’objet d’un jugement ou d’une décision mettant fin 	au dossier </value>
+  </data>
+  <data name="Msg_1_1_4" xml:space="preserve">
+    <value>Nombre d’appels, d’appels incidents et de renvois civils et de contrôles judiciaires fermés par le greffier, le responsable de la gestion des dossiers ou le personnel autorisé ou par application des règles</value>
+  </data>
+  <data name="Lbl_1_1_5" xml:space="preserve">
+    <value>Nombre d’appels, d’appels incidents et de renvois civils et de contrôles judiciaires réglés à la suite d’une médiation judiciaire</value>
+  </data>
+  <data name="Tip_1_1_5" xml:space="preserve">
+    <value>Pour être comptée dans cette catégorie, une instance doit avoir été réglée durant la médiation judiciaire, notamment par le règlement, l’abandon ou le désistement de l’appel.</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Succès</value>
+  </data>
+  <data name="Msg_1_1_5" xml:space="preserve">
+    <value>Nombre d’appels, d’appels incidents et de renvois civils et de contrôles judiciaires réglés à la suite d’une médiation judiciaire</value>
+  </data>
+  <data name="Lbl_1_1_6" xml:space="preserve">
+    <value>Nombre d’appels, d’appels incidents et de renvois civils et de contrôles judiciaires terminés d’autres façons</value>
+  </data>
+  <data name="Tip_1_1_6" xml:space="preserve">
+    <value>Ces appels, appels incidents et renvois civils et contrôles judiciaires doivent inclure ceux qui ont été abandonnés, retirés, rejetés par défaut de poursuites, non-respect des règles, les décisions du juge seul mettant fin au dossier, etc. Les appels, appels incidents et renvois civils et les contrôles judiciaires abandonnés ou retirés par le greffier incluent les constats de caducité délivrés par le greffier.</value>
+  </data>
+  <data name="Msg_1_1_6" xml:space="preserve">
+    <value>Nombre d’appels, d’appels incidents et de renvois civils et de contrôles judiciaires terminés d’autres façons</value>
+  </data>
+  <data name="Lbl_1_1_7" xml:space="preserve">
+    <value>Nombre total d’appels, d’appels incidents et de renvois civils et de contrôles judiciaires</value>
+  </data>
+  <data name="Tip_1_1_7" xml:space="preserve">
+    <value>Appels, appels incidents et renvois civils et 	contrôles judiciaires déposés mais encore en cours au 31 décembre de l’année précédente (1.1.1) plus les nouveaux appels, appels incidents et renvois civils et de contrôles judiciaires déposés (1.1.2) moins le total des appels, appels incidents et renvois civils et de contrôles judiciaires ayant fait l’objet d’un jugement ou d’une décision mettant fin au dossier, fermés 	par le greffier, réglés à la suite d’une médiation, abandonnés ou retirés (1.1.3 à 1.1.6) = appels, appels incidents et renvois civils et de contrôles judiciaires nets pour l’année.</value>
+  </data>
+  <data name="Msg_1_1_7" xml:space="preserve">
+    <value>Nombre total d’appels, d’appels incidents et de renvois civils et de contrôles judiciaires</value>
+  </data>
+  <data name="Lbl_1_2_Title" xml:space="preserve">
+    <value>Appels, appels incidents et renvois criminels et révisions de cautionnement (déposés, ayant fait l’objet d’un jugement ou d’une décision mettant fin au dossier et abandonnés ou retirés) </value>
+  </data>
+  <data name="Lbl_1_2_CheckboxText" xml:space="preserve">
+    <value>L’appel concernant la décision sur la culpabilité et l’appel concernant la décision sur la peine sont entendus en même temps</value>
+  </data>
+  <data name="Tip_1_2_Checkbox" xml:space="preserve">
+    <value>Les cours qui entendent les appels concernant la décision sur la culpabilité et concernant la décision sur la peine en même temps doivent cocher cette case.</value>
+  </data>
+  <data name="Lbl_1_2_1" xml:space="preserve">
+    <value>Nombre d’appels, d’appels incidents et de renvois criminels et de révisions de cautionnement déposés mais encore en cours au 31 décembre de l’année précédente.</value>
+  </data>
+  <data name="Msg_1_2_1" xml:space="preserve">
+    <value>Nombre d’appels, d’appels incidents et de renvois criminels et de révisions de cautionnement déposés mais encore en cours au 31 décembre de l’année précédente.</value>
+  </data>
+  <data name="Lbl_1_2_2" xml:space="preserve">
+    <value>Nombre d’appels, d’appels incidents et de renvois criminels et de révisions de cautionnement déposés</value>
+  </data>
+  <data name="Tip_1_2_2" xml:space="preserve">
+    <value>Les appels, appels incidents et renvois criminels et les révisions de cautionnement déposés et impliquant la &lt;i&gt;Loi sur le système de justice pénale pour les adolescents&lt;/i&gt; ne doivent pas être analysés séparément. Ils devraient être comptés comme n’importe quel autre appel, appel incident ou renvoi criminel ou révision de cautionnement déposé.</value>
+  </data>
+  <data name="Msg_1_2_2" xml:space="preserve">
+    <value>Nombre d’appels, d’appels incidents et de renvois criminels et de révisions de cautionnement déposés</value>
+  </data>
+  <data name="Lbl_1_2_3" xml:space="preserve">
+    <value>Nombre d’appels, d’appels incidents et de renvois criminels et de révisions de cautionnement ayant fait l’objet d’un jugement ou d’une décision mettant fin au dossier</value>
+  </data>
+  <data name="Tip_1_2_3" xml:space="preserve">
+    <value>Les appels, appels incidents et renvois criminels et les révisions de cautionnement réglés par jugement impliquant la &lt;i&gt;Loi sur le système de justice pénale pour les adolescents&lt;/i&gt; ne doivent pas être analysés séparément. Ils devraient être comptés comme n’importe quel autre appel, appel incident ou renvoi criminel ou révision de cautionnement instruit.</value>
+  </data>
+  <data name="Msg_1_2_3" xml:space="preserve">
+    <value>Nombre d’appels, d’appels incidents et de renvois criminels et de révisions de cautionnement ayant fait l’objet d’un jugement ou d’une décision mettant fin au dossier </value>
+  </data>
+  <data name="Lbl_1_2_4" xml:space="preserve">
+    <value>Nombre d’appels, d’appels incidents et renvois criminels et de révisions de cautionnement terminés d’autres façons</value>
+  </data>
+  <data name="Tip_1_2_4" xml:space="preserve">
+    <value>Ces appels, appels incidents et renvois et révisions de cautionnement doivent inclure ceux qui ont été réglés par facilitation pénale, abandonnés, retirés, rejetés par défaut de poursuite, non-respect des règles, les décisions du juge seul mettant fin au dossier, etc.</value>
+  </data>
+  <data name="Msg_1_2_4" xml:space="preserve">
+    <value>Nombre d’appels, d’appels incidents et renvois criminels et de révisions de cautionnement terminés d’autres façons</value>
+  </data>
+  <data name="Lbl_1_2_5" xml:space="preserve">
+    <value>Nombre total  d’appels, d’appels incidents et de renvois criminels et de révisions de cautionnement</value>
+  </data>
+  <data name="Tip_1_2_5" xml:space="preserve">
+    <value>Appels, appels incidents et renvois criminels et révisions decautionnement déposés mais encore en cours au 31 décembre de l’année précédente (1.2.1) plus les nouveaux appels, appels incidents et renvois criminels et révisions de cautionnement déposés (1.2.2) moins le total des appels, appels incidents et renvois criminels et des révisions de cautionnement ayant fait l’objet d’un jugement ou d’une décision mettant fin au dossier, réglés par facilitation pénale, abandonnés ou retirés (1.2.3 to 1.2.4) = appels, appels incidents et renvois criminels et révisions de cautionnement nets pour l’année.</value>
+  </data>
+  <data name="Msg_1_2_5" xml:space="preserve">
+    <value>Nombre total  d’appels, d’appels incidents et de renvois criminels et de révisions de cautionnement</value>
+  </data>
+  <data name="Comments" xml:space="preserve">
+    <value>Commentaires</value>
+  </data>
+  <data name="Lbl_2_Heading" xml:space="preserve">
+    <value>Affaires civiles et criminelles décidées</value>
+  </data>
+  <data name="Lbl_2_1_Title" xml:space="preserve">
+    <value>Affaires civiles décidées</value>
+  </data>
+  <data name="Lbl_2_1_1" xml:space="preserve">
+    <value>Nombre de décisions d’affaires civiles rendues à l’audience</value>
+  </data>
+  <data name="Tip_2_1_1" xml:space="preserve">
+    <value>Une décision rendue à l’audience (aussi appelée décision rendue sur le banc) est une décision rendue immédiatement après l’audience, le même jour que l’audience ou pendant la même semaine que l’audience. Si une 	décision est rendue à l’audience, mais que les motifs sont prononcés plus tard, c’est-à-dire qu’ils ne sont pas donnés immédiatement après l’audience, le même jour que l’audience ou pendant la même semaine 	que l’audience, la décision devrait être comptée comme un jugement mis en délibéré.</value>
+  </data>
+  <data name="Msg_2_1_1" xml:space="preserve">
+    <value>FR-Number of civil appeals, cross-appeals, references, and JRs filed of civil case decisions given at hearing</value>
+  </data>
+  <data name="Lbl_2_1_2" xml:space="preserve">
+    <value>Nombre de décisions d’affaires civiles déposées après délibéré</value>
+  </data>
+  <data name="Tip_2_1_2" xml:space="preserve">
+    <value>Une décision déposée après délibéré est une décision rendue à une date ultérieure, c.-à-d. qui n’est pas rendue immédiatement après l’audience, le même jour que l’audience ou pendant la même semaine que l’audience.</value>
+  </data>
+  <data name="Msg_2_1_2" xml:space="preserve">
+    <value>Nombre de décisions d’affaires civiles déposées après délibéré</value>
+  </data>
+  <data name="Lbl_2_2_Title" xml:space="preserve">
+    <value>Affaires criminelles décidées</value>
+  </data>
+  <data name="Lbl_2_2_1" xml:space="preserve">
+    <value>Nombre de décisions d’affaires criminelles rendues à l’audience</value>
+  </data>
+  <data name="Tip_2_2_1" xml:space="preserve">
+    <value>Une décision rendue à l’audience (aussi appelée décision rendue sur le banc) est une décision rendue immédiatement après l’audience, le même jour que l’audience ou pendant la même semaine que l’audience. Si une 	décision est rendue à l’audience, mais que les motifs sont prononcés plus tard, c’est-à-dire qu’ils ne sont pas donnés immédiatement après l’audience, le même jour que l’audience ou pendant la même semaine 	que l’audience, la décision devrait être comptée comme un jugement mis en délibéré.&lt;br/&gt;&lt;br/&gt;Les décisions impliquant la &lt;i&gt;Loi sur le système de justice pénale pour les adolescents&lt;/i&gt; ne doivent pas être compilées séparément. Elles devraient être comptées comme n’importe quelle autre décision d’appel en matière criminelle.</value>
+  </data>
+  <data name="Msg_2_2_1" xml:space="preserve">
+    <value>Nombre de décisions d’affaires criminelles rendues à l’audience</value>
+  </data>
+  <data name="Lbl_2_2_1_1" xml:space="preserve">
+    <value>Nombre de verdicts de culpabilité/acquittements rendus à l’audience</value>
+  </data>
+  <data name="Msg_2_2_1_1" xml:space="preserve">
+    <value>Nombre de verdicts de culpabilité/acquittements rendus à l’audience</value>
+  </data>
+  <data name="Lbl_2_2_1_2" xml:space="preserve">
+    <value>Nombre de jugements sur la peine rendus à l’audience</value>
+  </data>
+  <data name="Msg_2_2_1_2" xml:space="preserve">
+    <value>Nombre de jugements sur la peine rendus à l’audience</value>
+  </data>
+  <data name="Lbl_2_2_1_3" xml:space="preserve">
+    <value>Exemples d'autres appels criminels : habeas corpus, prohibition, certiorari, examens de troubles mentaux, etc.</value>
+  </data>
+  <data name="Tip_2_2_1_3" xml:space="preserve">
+    <value>Exemples d’autres appels criminels : habeas corpus, prohibition, certiorari, examens de troubles mentaux, etc.</value>
+  </data>
+  <data name="Msg_2_2_1_3" xml:space="preserve">
+    <value>Exemples d'autres appels criminels : habeas corpus, prohibition, certiorari, examens de troubles mentaux, etc.</value>
+  </data>
+  <data name="Lbl_2_2_2" xml:space="preserve">
+    <value>Nombre de décisions criminelles déposées après la mise en délibéré</value>
+  </data>
+  <data name="Tip_2_2_2" xml:space="preserve">
+    <value>Une décision déposée après délibéré est une décision rendue à une date ultérieure, c.-à-d. qui n’est pas rendue immédiatement après l’audience, le même jour que l’audience ou pendant la même semaine que l’audience. Si 	une décision est rendue à l’audience, mais que les motifs sont prononcés plus tard, c’est-à-dire qu’ils ne sont pas donnés immédiatement après l’audience, le même jour que l’audience ou pendant la même semaine que l’audience, la décision devrait être comptée comme un jugement mis en 	délibéré.</value>
+  </data>
+  <data name="Msg_2_2_2" xml:space="preserve">
+    <value>Nombre de décisions criminelles déposées après la mise en délibéré</value>
+  </data>
+  <data name="Lbl_2_2_2_1" xml:space="preserve">
+    <value>Nombre de verdicts de culpabilité/acquittements déposés après la mise en délibéré</value>
+  </data>
+  <data name="Msg_2_2_2_1" xml:space="preserve">
+    <value>Nombre de verdicts de culpabilité/acquittements déposés après la mise en délibéré</value>
+  </data>
+  <data name="Lbl_2_2_2_2" xml:space="preserve">
+    <value>Nombre de jugements sur la peine déposés après la mise en délibéré </value>
+  </data>
+  <data name="Msg_2_2_2_2" xml:space="preserve">
+    <value>Nombre de jugements sur la peine déposés après la mise en délibéré</value>
+  </data>
+  <data name="Lbl_2_2_2_3" xml:space="preserve">
+    <value>Nombre d’autres jugements sur des appels criminels déposés après la mise en délibéré.</value>
+  </data>
+  <data name="Tip_2_2_2_3" xml:space="preserve">
+    <value>Exemples d’autres appels criminels : habeas corpus, prohibition, certiorari, examens de troubles mentaux, etc.</value>
+  </data>
+  <data name="Msg_2_2_2_3" xml:space="preserve">
+    <value>Nombre d’autres jugements sur des appels criminels déposés après la mise en délibéré.</value>
+  </data>
+  <data name="Lbl_3_Heading" xml:space="preserve">
+    <value>Nombre total de décisions/jugements rendus sur le banc et mis en délibéré</value>
+  </data>
+  <data name="Lbl_3_1" xml:space="preserve">
+    <value>Nombre de décisions/jugements rendus sur le banc</value>
+  </data>
+  <data name="Tip_3_1" xml:space="preserve">
+    <value>Les décisions/jugements rendus sur le banc sont aussi appelée décisions rendues à l’audience. Une décision rendue sur le banc ou une décision rendue à l’audience est rendue immédiatement après l’audience, le même jour que l’audience ou pendant la même semaine que l’audience. Les décisions impliquant la &lt;i&gt;Loi sur le système de justice pénale pour les adolescents&lt;/i&gt; ne doivent pas être compilées séparément. Elles devraient être comptées comme n’importe quelle autre décision ou jugement.</value>
+  </data>
+  <data name="Msg_3_1" xml:space="preserve">
+    <value>Nombre de décisions/jugements rendus sur le banc</value>
+  </data>
+  <data name="Lbl_3_2" xml:space="preserve">
+    <value>Nombre de décisions/jugements mis en délibéré </value>
+  </data>
+  <data name="Tip_3_2" xml:space="preserve">
+    <value>Une décision mise en délibéré est une décision rendue à une date ultérieure, c.-à-d. qui n’est pas rendue immédiatement après l’audience, le même jour que l’audience ou pendant la même semaine que l’audience. Les décisions impliquant la &lt;i&gt;Loi sur le système de justice pénale pour les adolescents&lt;/i&gt; ne doivent pas être compilées séparément. Elles devraient être comptées comme n’importe quelle autre décision d’appel en matière criminelle.</value>
+  </data>
+  <data name="Msg_3_2" xml:space="preserve">
+    <value>Nombre de décisions/jugements mis en délibéré </value>
+  </data>
+  <data name="Lbl_4_Heading" xml:space="preserve">
+    <value>Intervalles de temps pour les affaires civiles et criminelles</value>
+  </data>
+  <data name="Tip_4_Heading" xml:space="preserve">
+    <value>Les statistiques des affaires civiles et criminelles doivent être compilées pour trois intervalles de temps : 1) entre l’avis d’appel et le dépôt du mémoire (ou le document qui en tient lieu) par l’appelant, 2) entre le dépôt du mémoire par l’appelant et l’audience, et 3) entre l’audience et la décision finale.&lt;br/&gt;&lt;br/&gt;
+Pour chaque intervalle de temps, de l’information sera compilée pour trois périodes : 1) moins de 6 mois, 2) entre 6 et 12 mois, et 3) plus de 12 mois.</value>
+  </data>
+  <data name="Lbl_4_1" xml:space="preserve">
+    <value>FR-This time interval refers to the interval from the time a notice of appeal is filed (either as of right or after a motion for leave to appeal has been granted) to the time the appellant’s factum is filed and the appeal is ready to be set down for a hearing. The appeal is considered ready to be set down for a hearing on the date at which the appellant has done everything required by the rules of court to prepare an appeal for hearing (typically the serving and filing of the appeal book, transcripts and appellant’s factum). On references, the date the Order in Council or of the originating document is received will replace the notice of appeal date.
+</value>
+  </data>
+  <data name="Lbl_CivilCases" xml:space="preserve">
+    <value>Affaires civiles</value>
+  </data>
+  <data name="Lbl_CriminalCases" xml:space="preserve">
+    <value>Affaires criminelles </value>
+  </data>
+  <data name="Tip_CriminalCases" xml:space="preserve">
+    <value>FR-For criminal cases, the time intervals and time periods should be reported for each of the following three categories of criminal appeals: 1) Conviction/acquittal, 2) Sentence, and 3) Other.</value>
+  </data>
+  <data name="Lbl_4_1_1" xml:space="preserve">
+    <value>Nombre d’affaires civiles où l’intervalle de temps entre l’avis d’appel et le dépôt du mémoire de l’appelant est de moins de 6 mois</value>
+  </data>
+  <data name="Msg_4_1_1" xml:space="preserve">
+    <value>Nombre d’affaires civiles où l’intervalle de temps entre l’avis d’appel et le dépôt du mémoire de l’appelant est de moins de 6 mois</value>
+  </data>
+  <data name="Lbl_4_1_CriminalCases" xml:space="preserve">
+    <value>Affaires criminelles </value>
+  </data>
+  <data name="Tip_4_1_CriminalCases" xml:space="preserve">
+    <value>Cet intervalle désigne l’intervalle entre le moment où un avis d’appel est déposé (que ce soit de plein droit ou après qu’une demande d’autorisation d’appel a été accordée) et le moment où le mémoire de l’appelant est déposé et que l’appel est prêt à être mis au rôle pour audition. L’appel est considéré comme prêt à être mis au rôle pour audition à la date où l’appelant a fait tout ce qui est exigé par les règles de la cour pour préparer l’audition de l’appel (généralement la signification et le dépôt du dossier d’appel, des transcriptions et du mémoire de l’appelant). Pour ce qui est des renvois, la date de réception du décret ou de l’acte introductif d’instance remplace la date de l’avis d’appel.</value>
+  </data>
+  <data name="Lbl_4_1_2" xml:space="preserve">
+    <value>Nombre d’affaires civiles où l’intervalle de temps entre l’avis d’appel et le dépôt du mémoire de l’appelant est entre 6 et 12 mois</value>
+  </data>
+  <data name="Msg_4_1_2" xml:space="preserve">
+    <value>Nombre d’affaires civiles où l’intervalle de temps entre l’avis d’appel et le dépôt du mémoire de l’appelant est entre 6 et 12 mois</value>
+  </data>
+  <data name="Lbl_4_1_3" xml:space="preserve">
+    <value>Nombre d’affaires civiles où l’intervalle de temps entre l’avis d’appel et le dépôt du mémoire de l’appelant est de plus de 12 mois </value>
+  </data>
+  <data name="Msg_4_1_3" xml:space="preserve">
+    <value>Nombre d’affaires civiles où l’intervalle de temps entre l’avis d’appel et le dépôt du mémoire de l’appelant est de plus de 12 mois</value>
+  </data>
+  <data name="Lbl_4_1_4" xml:space="preserve">
+    <value>Nombre d’affaires criminelles où l’intervalle de temps entre l’avis d’appel 	et le dépôt du mémoire de l’appelant est de moins de 6 mois pour :</value>
+  </data>
+  <data name="Lbl_4_1_4_1" xml:space="preserve">
+    <value>Culpabilité/acquittement</value>
+  </data>
+  <data name="Msg_4_1_4_1" xml:space="preserve">
+    <value>Culpabilité/acquittement</value>
+  </data>
+  <data name="Sec4_Heading" xml:space="preserve">
+    <value>Intervalles de temps pour les affaires civiles et criminelles</value>
+  </data>
+  <data name="Sec4_Heading_Tip" xml:space="preserve">
+    <value>Les statistiques des affaires civiles et criminelles doivent être compilées pour trois intervalles de temps : 1) entre l’avis d’appel et le dépôt du mémoire (ou le document qui en tient lieu) par l’appelant, 2) entre le dépôt du mémoire par l’appelant et l’audience, et 3) entre l’audience et la décision finale.&lt;br/&gt;&lt;br/&gt;
+Pour chaque intervalle de temps, de l’information sera compilée pour trois périodes : 1) moins de 6 mois, 2) entre 6 et 12 mois, et 3) plus de 12 mois.</value>
+  </data>
+  <data name="Sec4_411_Label" xml:space="preserve">
+    <value>Nombre d’affaires civiles où l’intervalle de temps entre l’avis d’appel et le dépôt du mémoire de l’appelant est de moins de 6 mois </value>
+  </data>
+  <data name="Sec4_412_Label" xml:space="preserve">
+    <value>Nombre d’affaires civiles où l’intervalle de temps entre l’avis d’appel et le dépôt du mémoire de l’appelant est entre 6 et 12 mois </value>
+  </data>
+  <data name="Sec4_413_Label" xml:space="preserve">
+    <value>Nombre d’affaires civiles où l’intervalle de temps entre l’avis d’appel et le dépôt du mémoire de l’appelant est de plus de 12 mois</value>
+  </data>
+  <data name="Sec4_414_Label" xml:space="preserve">
+    <value>Nombre d’affaires criminelles où l’intervalle de temps entre l’avis d’appel 	et le dépôt du mémoire de l’appelant est de moins de 6 mois pour : </value>
+  </data>
+  <data name="Sec4_415_Label" xml:space="preserve">
+    <value>Nombre d’affaires criminelles où l’intervalle de temps entre l’avis d’appel 	et le dépôt du mémoire de l’appelant est entre 6 et 12 mois pour :</value>
+  </data>
+  <data name="Sec4_416_Label" xml:space="preserve">
+    <value>Nombre d’affaires criminelles où l’intervalle de temps entre l’avis d’appel 	et le dépôt du mémoire de l’appelant est de plus de 12 mois pour : </value>
+  </data>
+  <data name="Sec4_41_Heading" xml:space="preserve">
+    <value>Entre l’avis d’appel et le dépôt du mémoire de l’appelant</value>
+  </data>
+  <data name="Sec4_41_Tip" xml:space="preserve">
+    <value>Cet intervalle désigne l’intervalle entre le moment où un avis d’appel est déposé (que ce soit de plein droit ou après qu’une demande d’autorisation d’appel a été accordée) et le moment où le mémoire de l’appelant est déposé et que l’appel est prêt à être mis au rôle pour audition. L’appel est considéré comme prêt à être mis au rôle pour audition à la date où l’appelant a fait tout ce qui est exigé par les règles de la cour pour préparer l’audition de l’appel (généralement la signification et le dépôt du dossier d’appel, des transcriptions et du mémoire de l’appelant). Pour ce qui est des renvois, la date de réception du décret ou de l’acte introductif d’instance remplace la date de l’avis d’appel.</value>
+  </data>
+  <data name="Sec4_CivilCases" xml:space="preserve">
+    <value>Affaires civiles</value>
+  </data>
+  <data name="Sec4_CriminalCases" xml:space="preserve">
+    <value>Affaires criminelles</value>
+  </data>
+  <data name="Sec4_CriminalCases_Tip" xml:space="preserve">
+    <value>Pour les affaires criminelles, les intervalles de temps et les périodes devraient être  indiqués pour chacune des trois catégories d’appels en matière criminelle suivantes :  1) culpabilité/acquittement, 2) peine, et 3) autre. </value>
+  </data>
+  <data name="Sec4_42_Heading" xml:space="preserve">
+    <value>Entre le dépôt du mémoire de l’appelant et l’audience</value>
+  </data>
+  <data name="Sec4_42_Tip" xml:space="preserve">
+    <value>Cet intervalle de temps désigne l’intervalle entre le moment où il y a dépôt du mémoire de l’appelant et le moment où l’affaire est entendue. Le moment où l’appel est entendu est le jour véritable de l’audition de l’appel et &lt;u&gt;non pas&lt;/u&gt; la date prévue de l’audience.&lt;br/&gt;&lt;br/&gt;
+Si l’audience dure plus d’une journée, utilisez le premier jour de l’audience pour calculer l’intervalle de temps entre le dépôt du mémoire de l’appelant et l’audience, et l’intervalle de temps entre l’audience et la décision finale. </value>
+  </data>
+  <data name="Sec4_421_Label" xml:space="preserve">
+    <value>Nombre d’affaires civiles où l’intervalle de temps entre le dépôt du mémoire de l’appelant et l’audience est de moins de 6 mois</value>
+  </data>
+  <data name="Sec4_422_Label" xml:space="preserve">
+    <value>Nombre d’affaires civiles où l’intervalle de temps entre le dépôt du mémoire de l’appelant et l’audience est entre 6 et 12 mois</value>
+  </data>
+  <data name="Sec4_423_Label" xml:space="preserve">
+    <value>Nombre d’affaires civiles où l’intervalle de temps entre le dépôt du mémoire de l’appelant et l’audience est de plus de 12 mois </value>
+  </data>
+  <data name="Sec4_424_Label" xml:space="preserve">
+    <value>Nombre d’affaires criminelles où l’intervalle de temps entre le dépôt du mémoire de l’appelant et l’audience est de moins de 6 mois pour : </value>
+  </data>
+  <data name="Sec4_425_Label" xml:space="preserve">
+    <value>Nombre d’affaires criminelles où l’intervalle de temps entre le dépôt du mémoire de l’appelant et l’audience est entre 6 et 12 mois pour : </value>
+  </data>
+  <data name="Sec4_426_Label" xml:space="preserve">
+    <value>Nombre d’affaires criminelles où l’intervalle de temps entre le dépôt du mémoire de l’appelant et l’audience a pris plus de 12 mois pour : </value>
+  </data>
+  <data name="Sec4_43_Heading" xml:space="preserve">
+    <value>Entre l’audience et la décision finale</value>
+  </data>
+  <data name="Sec4_43_Tip" xml:space="preserve">
+    <value>Cet intervalle de temps désigne l’intervalle entre le jour de l’audience (le jour véritable de l’audition de l’appel et &lt;u&gt;non pas&lt;/u&gt; la date prévue de l’audience) et la date de la décision ou du jugement.</value>
+  </data>
+  <data name="Sec4_431_Label" xml:space="preserve">
+    <value>Nombre d’affaires civiles où l’intervalle de temps entre l’audience et la décision finale est de moins de 6 mois </value>
+  </data>
+  <data name="Sec4_432_Label" xml:space="preserve">
+    <value>Nombre d’affaires civiles où l’intervalle de temps entre l’audience et la décision finale est entre 6 et 12 mois </value>
+  </data>
+  <data name="Sec4_433_Label" xml:space="preserve">
+    <value>Nombre d’affaires civiles où l’intervalle de temps entre l’audience et la décision finale est de plus de 12 mois</value>
+  </data>
+  <data name="Sec4_434_Label" xml:space="preserve">
+    <value>Nombre d’affaires criminelles où l’intervalle de temps entre l’audience et la décision finale est de moins de 6 mois pour :</value>
+  </data>
+  <data name="Sec4_435_Label" xml:space="preserve">
+    <value>Nombre d’affaires criminelles où l’intervalle de temps entre l’audience et la décision finale est entre 6 et 12 mois pour :</value>
+  </data>
+  <data name="Sec4_436_Label" xml:space="preserve">
+    <value>Nombre d’affaires criminelles où l’intervalle de temps entre l’audience et 	la décision finale est de plus de 12 mois pour :  </value>
+  </data>
+  <data name="Sec4_Comments_Label" xml:space="preserve">
+    <value>Commentaires</value>
+  </data>
+  <data name="Common_ConvictionAcquittal" xml:space="preserve">
+    <value>Culpabilité/acquittement </value>
+  </data>
+  <data name="Common_Sentence" xml:space="preserve">
+    <value>Peine</value>
+  </data>
+  <data name="Common_Other" xml:space="preserve">
+    <value>Autre</value>
+  </data>
+  <data name="Sec5_Heading" xml:space="preserve">
+    <value>Nombre d’audiences en personne, virtuelles et hybrides</value>
+  </data>
+  <data name="Sec5_Heading_Tip" xml:space="preserve">
+    <value>Le nombre d’audiences dans cette section doit être compilé pour les &lt;u&gt;audiences entendues par une formation de juges seulement.&lt;/u&gt;.</value>
+  </data>
+  <data name="Sec5_51_Label_Short" xml:space="preserve">
+    <value>Audiences en personne</value>
+  </data>
+  <data name="Sec5_51_Tip" xml:space="preserve">
+    <value>Nombre d’audiences où toutes les parties étaient présentes en cour pour l’audience. Cette description inclut également les situations où l’avocat s’est présenté à l’audience en personne mais que l’individu qu’il représente s’est présenté à distance ou virtuellement.</value>
+  </data>
+  <data name="Sec5_52_Label_Short" xml:space="preserve">
+    <value>Audiences virtuelles</value>
+  </data>
+  <data name="Sec5_52_Tip" xml:space="preserve">
+    <value>Nombre d’audiences où toutes les parties ont assisté à l’audience à distance ou virtuellement.</value>
+  </data>
+  <data name="Sec5_53_Label_Short" xml:space="preserve">
+    <value>Audiences hybrides</value>
+  </data>
+  <data name="Sec5_53_Tip" xml:space="preserve">
+    <value>Nombre d’audiences où une ou plusieurs parties étaient présentes en cour pour l’audience, et où une ou plusieurs parties ont assisté à l’audience à distance ou virtuellement.</value>
+  </data>
+  <data name="Sec5_54_Label" xml:space="preserve">
+    <value>Nombre total d’audiences en personne, virtuelles et hybrides</value>
+  </data>
+  <data name="Sec5_54_Tip" xml:space="preserve">
+    <value>Ce champ est renseigné automatiquement à partir des champs 5.1 à 5.3</value>
+  </data>
+  <data name="Sec6_Heading" xml:space="preserve">
+    <value>Nombre de requêtes et demandes</value>
+  </data>
+  <data name="Sec6_Heading_Tip" xml:space="preserve">
+    <value>Le nombre de requêtes et demandes entendues en cabinet (juge seul), par une formation (trois juges ou plus) et par le greffier . Les requêtes ou les demandes entendues au moment de l’audience ne doivent pas être incluses. Les requêtes et les demandes présentées par écrit devraient être incluses. Les ordonnances de consentement devraient aussi être incluses si les juges ont dû y consacrer du temps. &lt;br /&gt;&lt;br /&gt;En ce qui concerne les demandes d’autorisation d’appel et les demandes d’autorisation de proroger le délai d’appel :&lt;br /&gt;&lt;br /&gt;1. Si l’autorisation est accordée, ces demandes devraient être comptées à la fois comme une requête entendue et comme un appel déposé qui est ultérieurement décidé par voie de jugement ou par d’autres moyens. Lorsque la pratique de la cour consiste à ouvrir un nouveau (deuxième) dossier, la requête entendue doit être comptée seulement dans le premier dossier, et l’appel déposé doit être compté dans le deuxième dossier, ou&lt;br /&gt;&lt;br /&gt;2. Si la requête ou la demande est entendue mais que l’autorisation est refusée, ces demandes devraient être comptées seulement comme une requête entendue par un ou plusieurs juges des requêtes. Cependant, si l’appel complet est entendu mais que l’autorisation est refusée par une formation d’appel, ces demandes devraient être comptées seulement comme un appel décidé par d’autres moyens. </value>
+  </data>
+  <data name="Sec6_61_Label" xml:space="preserve">
+    <value>Requêtes et demandes entendues par un juge seul</value>
+  </data>
+  <data name="Sec6_611_Label" xml:space="preserve">
+    <value>Nombre de requêtes et demandes déposées devant un juge seul</value>
+  </data>
+  <data name="Sec6_612_Label" xml:space="preserve">
+    <value>Nombre de requêtes et demandes décidées par un juge seul</value>
+  </data>
+  <data name="Sec6_613_Label" xml:space="preserve">
+    <value>Nombre de requêtes et demandes devant un juge seul qui ont été abandonnées, retirées, ou rejetées pour des motifs administratifs</value>
+  </data>
+  <data name="Sec6_613_Tip" xml:space="preserve">
+    <value>Exemples de motifs administratifs : rejet pour défaut de poursuite, pour cause de non-respect des règles, parce que la demande d’autorisation a été rejetée, etc. 
+</value>
+  </data>
+  <data name="Sec6_62_Label" xml:space="preserve">
+    <value>Requêtes et demandes entendues par une formation de trois juges ou plus</value>
+  </data>
+  <data name="Sec6_621_Label" xml:space="preserve">
+    <value>Nombre de requêtes et demandes déposées devant une formation de trois juges ou plus</value>
+  </data>
+  <data name="Sec6_622_Label" xml:space="preserve">
+    <value>Nombre de requêtes et demandes décidées par une formation de trois juges ou plus </value>
+  </data>
+  <data name="Sec6_623_Label" xml:space="preserve">
+    <value>Nombre de requêtes et demandes qui ont été abandonnées, retirées ou rejetées pour des motifs administratifs</value>
+  </data>
+  <data name="Sec6_623_Tip" xml:space="preserve">
+    <value>Exemples de motifs administratifs : rejet pour défaut de poursuite, pour cause de non-respect des règles, parce que la demande d’autorisation a été rejetée, etc. 
+</value>
+  </data>
+  <data name="Sec6_63_Label" xml:space="preserve">
+    <value>Requêtes et demandes entendues par le greffier</value>
+  </data>
+  <data name="Sec6_631_Label" xml:space="preserve">
+    <value>Nombre de requêtes et demandes déposées devant le greffier </value>
+  </data>
+  <data name="Sec6_632_Label" xml:space="preserve">
+    <value>Nombre de requêtes et demandes décidées par le greffier </value>
+  </data>
+  <data name="Sec6_633_Label" xml:space="preserve">
+    <value>Nombre de requêtes et demandes qui ont été abandonnées, retirées ou 	rejetées par le greffier ou pour des motifs administratifs </value>
+  </data>
+  <data name="Sec6_633_Tip" xml:space="preserve">
+    <value>Exemples de motifs administratifs : rejet pour défaut de poursuite, pour cause de non-respect des règles, parce que la demande d’autorisation a été rejetée, etc. 
+</value>
+  </data>
+  <data name="Sec7_Heading" xml:space="preserve">
+    <value>Personnes qui se représentent seules</value>
+  </data>
+  <data name="Sec7_Heading_Tip" xml:space="preserve">
+    <value>Une personne qui se représente seule est une personne qui comparaît en justice sans être représentée par un avocat. Le plaideur n’est pas considéré comme une personne qui se représente seule si la cour a désigné un avocat pour assister cette personne.&lt;br /&gt;&lt;br /&gt;Le nombre d’appels et le nombre de requêtes impliquant une personne qui se représente seule est &lt;u&gt;seulement&lt;/u&gt; compilé lors de l’audience. Par exemple, si une personne est représentée par un avocat au moment du dépôt d’un appel ou d’une requête, mais qu’elle n’est pas représentée à l’audience, l’appel ou la requête est considéré comme une affaire impliquant une personne qui se représente seule.</value>
+  </data>
+  <data name="Sec7_711_Label" xml:space="preserve">
+    <value>Nombre d’affaires impliquant des personnes qui se représentent seules à l’audience au fond</value>
+  </data>
+  <data name="Sec7_712_Label" xml:space="preserve">
+    <value>Nombre de requêtes et demandes impliquant des personnes qui se représentent seules à l’audience pour une requête ou une motion (par un juge seul, par une formation de juges ou le greffier)</value>
+  </data>
+  <data name="Sec7_712_Tip" xml:space="preserve">
+    <value>Les requêtes ou les demandes entendues au moment de l’audience ne doivent pas être incluses.</value>
+  </data>
+  <data name="Sec7_713_Label" xml:space="preserve">
+    <value>Nombre total d’affaires, requêtes et demandes impliquant des personnes qui se représentent seules à l’audience</value>
+  </data>
+  <data name="Sec7_713_Tip" xml:space="preserve">
+    <value>Ce champ est rempli automatiquement à partir des champs 7.1.1 et 7.1.2.</value>
+  </data>
+  <data name="Sec8_Heading" xml:space="preserve">
+    <value>Nombre de décisions/jugements rendus </value>
+  </data>
+  <data name="Sec8_81_Label" xml:space="preserve">
+    <value>Moins de 6 mois</value>
+  </data>
+  <data name="Sec8_82_Label" xml:space="preserve">
+    <value>Entre 6 et 12 mois</value>
+  </data>
+  <data name="Sec8_83_Label" xml:space="preserve">
+    <value>Plus de 12 mois</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Sec8_Decision_Tip" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Sec9_Heading" xml:space="preserve">
+    <value>Nombre d’appels qui sont entendus</value>
+  </data>
+  <data name="Sec9_91_Label" xml:space="preserve">
+    <value>Par une formation de 3 juges</value>
+  </data>
+  <data name="Sec9_92_Label" xml:space="preserve">
+    <value>Par une formation de 5 juges</value>
+  </data>
+  <data name="Sec10_Heading" xml:space="preserve">
+    <value>Nombre total d’appels, d’appels incidents, de renvois, de révisions de cautionnement et de contrôles judiciaires qui sont en cours au 31 décembre</value>
+  </data>
+  <data name="Sec10_Heading_Tooltip" xml:space="preserve">
+    <value>L’inventaire de clôture d’une année est également l’inventaire d’ouverture de l’année suivante. Cet inventaire peut être mesuré « en date » du 31 décembre de chaque année. Les appels, appels incidents, renvois, révisions de cautionnement et contrôles judiciaires qui sont introduits avant le 31 décembre, mais pour lesquels un jugement ou une décision n’est pas rendu avant le 31 décembre, sont considérés comme étant en cours à cette date. Cela comprend les appels, appels incidents, renvois, révisions de cautionnement et contrôles judiciaires qui n’ont pas encore été entendus, de même que ceux qui ont été entendus mais pour lesquels un jugement n’a pas encore été prononcé. Ces appels, appels incidents, renvois, révisions de cautionnement et contrôles judiciaires figureront dans l’inventaire de clôture d’une année et dans l’inventaire d’ouverture de l’année suivante. </value>
+  </data>
+  <data name="Sec10_101_Label" xml:space="preserve">
+    <value>Nombre d’appels, d’appels incidents, de renvois, de révisions de cautionnement et de contrôles judiciaires qui n’ont pu être complétés au 31 décembre</value>
+  </data>
+  <data name="Sec10_101_Label_Plain" xml:space="preserve">
+    <value>Nombre d’appels, d’appels incidents, de renvois, de révisions de cautionnement et de contrôles judiciaires qui n’ont pu être complétés au 31 décembre</value>
+  </data>
+  <data name="Sec11_Heading" xml:space="preserve">
+    <value>Nombre total de juges en date du 31 décembre</value>
+  </data>
+  <data name="Sec11_111_Label" xml:space="preserve">
+    <value>Juges réguliers</value>
+  </data>
+  <data name="Sec11_111_Tooltip" xml:space="preserve">
+    <value> Le nombre de juges de la cour qui, en date du 31 décembre, n’ont pas choisi d’exercer les fonctions de juge surnuméraire et qui exercent des fonctions judiciaires normales.</value>
+  </data>
+  <data name="Sec11_111_DataMsg" xml:space="preserve">
+    <value>Juges réguliers</value>
+  </data>
+  <data name="Sec11_112_Label" xml:space="preserve">
+    <value>Juges surnuméraires</value>
+  </data>
+  <data name="Sec11_112_Tooltip" xml:space="preserve">
+    <value>Le nombre de juges de la cour qui, en date du 31 décembre exercent les fonctions de juge surnuméraire au terme de l’article 28 de la &lt;i&gt;Loi sur les juges&lt;/i&gt;. </value>
+  </data>
+  <data name="Sec11_112_DataMsg" xml:space="preserve">
+    <value>Juges surnuméraires</value>
+  </data>
+  <data name="Sec12_Heading" xml:space="preserve">
+    <value>Commentaires additionnels</value>
+  </data>
+  <data name="Sec12_Heading_Tooltip" xml:space="preserve">
+    <value>Des commentaires ne devraient être ajoutés qu’à titre exceptionnel. Une véritable anomalie est une situation qui est très différente de ce qui est considéré comme étant normal ou attendu.</value>
+  </data>
+  <data name="btn_Save" xml:space="preserve">
+    <value>Sauvegarder</value>
+  </data>
+  <data name="btn_NextTab" xml:space="preserve">
+    <value>Onglet suivant </value>
+  </data>
+  <data name="btnReviewStats" xml:space="preserve">
+    <value>Révision des statistiques </value>
+  </data>
+  <data name="AlertRecordAlreadyCompleted" xml:space="preserve">
+    <value>Ce formulaire a déjà été soumis pour la cour et l’année que vous avez sélectionnées. Si des modifications sont nécessaires aux statistiques que vous avez déjà soumises, veuillez envoyer un courriel à my-email@example.com
+</value>
+  </data>
+  <data name="Sec8_Decision1_Tip" xml:space="preserve">
+    <value>Nombre de décisions d’affaires civiles et criminelles qui sont rendues en moins de 6 mois à partir de la date de l’audience. Les affaires impliquant la &lt;i&gt;Loi sur le système de justice pénale pour les adolescents&lt;/i&gt; ne doivent pas être compilées séparément. Elles devraient être comptées comme n’importe quelle autre décision rendue.</value>
+  </data>
+  <data name="Sec8_Decision2_Tip" xml:space="preserve">
+    <value>Nombre de décisions relatives à des affaires civiles et criminelles qui sont rendues entre 6 et 12 mois à partir de la date de l’audience. Les affaires impliquant la &lt;i&gt;Loi sur le système de justice pénale pour les adolescents&lt;/i&gt; ne doivent pas être compilées séparément. Elles devraient être comptées comme n’importe quelle autre décision rendue.</value>
+  </data>
+  <data name="Sec8_Decision3_Tip" xml:space="preserve">
+    <value>Nombre de décisions relatives à des affaires civiles et criminelles qui sont rendues en plus de 12 mois à partir de la date de l’audience. Les affaires impliquant la &lt;i&gt;Loi sur le système de justice pénale pour les adolescents&lt;/i&gt; ne doivent pas être compilées séparément. Elles devraient être comptées comme n’importe quelle autre décision rendue.</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Oui</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Non</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>Échoué</value>
+  </data>
+  <data name="Continue_Draft" xml:space="preserve">
+    <value>Poursuivre en utilisant le formulaire provisoire</value>
+  </data>
+  <data name="Start_New_Form" xml:space="preserve">
+    <value>Commencer un nouveau formulaire</value>
+  </data>
+  <data name="ReviewTab12Msg" xml:space="preserve">
+    <value>Pour revoir et soumettre vos statistiques, veuillez cliquer sur le bouton Révision des statistiques ci-dessous.</value>
+  </data>
+</root>

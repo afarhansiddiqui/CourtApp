@@ -1,0 +1,497 @@
+﻿@page
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IStringLocalizer<FinalMessageModel> localizer
+@inject IHtmlLocalizer<FinalMessageModel> htmlLocalizer
+@model FinalMessageModel
+@{
+    ViewData["Title"] = "CAS";
+    if (HttpContext.Request.Query["culture"] == "fr")
+    {
+        CultureInfo.CurrentCulture = new CultureInfo("fr");
+        CultureInfo.CurrentUICulture = new CultureInfo("fr");
+        Response.Cookies.Append(
+            CookieRequestCultureProvider.DefaultCookieName,
+            CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(CultureInfo.CurrentCulture)),
+            new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
+        );
+    }
+    else if (HttpContext.Request.Query["culture"] == "en")
+    {
+        CultureInfo.CurrentCulture = new CultureInfo("en");
+        CultureInfo.CurrentUICulture = new CultureInfo("en");
+        Response.Cookies.Append(
+            CookieRequestCultureProvider.DefaultCookieName,
+            CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(CultureInfo.CurrentCulture)),
+            new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
+        );
+    }
+    var requestCultureFeature = HttpContext.Features.Get<IRequestCultureFeature>();
+    var requestCulture = requestCultureFeature.RequestCulture;
+    ViewData["Final"] = localizer["Final"];
+    ViewData["Create"] = localizer["Create"];
+    ViewData["Select"] = localizer["Select"];
+    ViewData["Home"] = localizer["Home"];
+}
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="~/css/dashboard03.css">
+
+<nav id="wb-bc" property="breadcrumb">
+    <div class="container">
+        <breadcrumb></breadcrumb>
+    </div>
+</nav>
+
+<div class="text-center"><h3>@htmlLocalizer["Heading"]</h3></div>
+
+<div class="text-center">
+    <form method="post" id="finalForm">
+        <input type="hidden" id="apiUrlSave" asp-for="@Model.apiUrlSave">
+        <input type="hidden" id="apiUrlRetrieve" asp-for="@Model.apiUrlRetrieve">
+        <input type="hidden" id="apiUrlPickCourt" asp-for="@Model.apiUrlPickCourt">
+        <input type="hidden" id="emailAddress" asp-for="@Model.emailAddress">
+        <input type="hidden" id="modelUuid" asp-for="@Model.modelUuid" value="00000000-0000-0000-0000-000000000000">
+        <input type="hidden" id="nodeUuid" asp-for="@Model.nodeUuid" value="00000000-0000-0000-0000-000000000000">
+        <input type="hidden" id="currentCulture" value="@CultureInfo.CurrentCulture.ToString()">
+        <input type="hidden" id="courtCode" value="@Model.txtCOURT">
+        <br />
+        <br />
+        <div>@htmlLocalizer["Text1"]</div><br />
+        <div>@htmlLocalizer["Text2"]</div><br />
+        <div>@htmlLocalizer["Text3"]</div><br />
+
+        @*         <div class="row ">
+            <div class="form-group col-md-6">
+                <label for="reqJson"><span class="field-name">Request Json </span></label>
+                <textarea class="form-control" id="reqJson" name="reqJson" type="text" asp-for="@Model.reqJson" autocomplete="reqJson" style="width:100%" multiple="true" rows="10" hidden>
+                            </textarea>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="resJson"><span class="field-name">Response Json </span></label>
+                <textarea class="form-control" id="resJson" name="resJson" type="text" asp-for="@Model.resJson" autocomplete="resJson" style="width:100%" multiple="true" rows="10" hidden>
+                            </textarea>
+            </div>
+        </div> *@
+        <br />
+
+        @* <select hidden style="pointer-events: none;" class="form-control" id="txtCOURTResult" asp-for="@Model.txtCOURT" onchange="javascript:enableDisableResult();" style="width:100%" required="required"
+                data-num="" data-msg="Please enter Name of Court">
+            <option value="">Select Court</option>
+        </select> *@
+
+        <select hidden id="txtCOURTResult"
+                                asp-for="@Model.txtCOURT" class="form-control"
+                                onchange="javascript:enableDisableReview();"
+                                data-num=""
+                                data-msg="@localizer["Msg_NameOfCourt"]">
+
+                            <option value="">Select Court</option>
+                            @foreach (var court in Model.Courts)
+                            {
+                                @if (CultureInfo.CurrentCulture.ToString() == "fr")
+                                {
+                                    <option value="@court.Code">@court.Desc_fr_CA</option>
+                                }
+                                else
+                                {
+                                    <option value="@court.Code">@court.Desc_en_CA</option>
+
+                                }
+
+                            }
+                        </select>
+
+
+        <select hidden style="pointer-events: none;" class="form-control" id="intREPORTINGYEARResult" asp-for="@Model.intREPORTINGYEAR" onchange="javascript:enableDisableResult();" style="width:100%;" required="required"
+                data-num="" data-msg="Please enter Reporting Year">
+            <option value="">Select Year</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
+            <option value="2028">2028</option>
+            <option value="2029">2029</option>
+            <option value="2030">2030</option>
+            <option value="2031">2031</option>
+            <option value="2032">2032</option>
+            <option value="2033">2033</option>
+            <option value="2034">2034</option>
+            <option value="2035">2035</option>
+            <option value="2036">2036</option>
+            <option value="2037">2037</option>
+            <option value="2038">2038</option>
+            <option value="2039">2039</option>
+            <option value="2040">2040</option>
+            <option value="2041">2041</option>
+            <option value="2042">2042</option>
+            <option value="2043">2043</option>
+            <option value="2044">2044</option>
+            <option value="2045">2045</option>
+        </select>
+
+        <input hidden class="form-control" id="dtFROM" name="dtFROM" type="date" asp-for="@Model.dtFROM" onchange="javascript:enableDisableResult();" autocomplete="dtFROM" data-rule-minlength="1" style="width:100%" required="required"
+               data-num="" data-msg="Please enter From Date">
+
+        <input hidden class="form-control" id="dtTO" name="dtTO" type="date" asp-for="@Model.dtTO" onchange="javascript:enableDisableResult();" autocomplete="dtTO" data-rule-minlength="1" style="width:100%" required="required"
+               data-num="" data-msg="Please enter To Date">
+
+
+
+        <input hidden class="form-control" id="txtFIELD1_1_1" name="txtFIELD1_1_1" type="number" min="0" asp-for="@Model.txtFIELD1_1_1" autocomplete="txtFIELD1_1_1" data-rule-minlength="1" style="width:100%"
+               data-num="1.1.1" data-msg="Number of civil appeals, cross-appeals, references, and JRs filed but still pending as of December 31<sup>st</sup> of the previous year" onchange="javascript:calculateField_1_1_7();">
+
+        <input hidden class="form-control" id="txtFIELD1_1_2" name="txtFIELD1_1_2" type="number" min="0" asp-for="@Model.txtFIELD1_1_2" autocomplete="txtFIELD1_1_2" data-rule-minlength="1" style="width:100%"
+               data-num="1.1.2" data-msg="Number of civil appeals, cross-appeals, references, and JRs filed" onchange="javascript:calculateField_1_1_7();">
+
+        <input hidden class="form-control" id="txtFIELD1_1_3" name="txtFIELD1_1_3" type="number" min="0" asp-for="@Model.txtFIELD1_1_3" autocomplete="txtFIELD1_1_3" data-rule-minlength="1" style="width:100%"
+               data-num="1.1.3" data-msg="Number of civil appeals, cross-appeals, references, and JRs disposed of by judgment" onchange="javascript:calculateField_1_1_7();">
+
+
+        <input hidden class="form-control" id="txtFIELD1_1_4" name="txtFIELD1_1_4" type="number" min="0" asp-for="@Model.txtFIELD1_1_4" autocomplete="txtFIELD1_1_4" data-rule-minlength="1" style="width:100%"
+               data-num="1.1.4" data-msg="Number of civil appeals, cross-appeals, references, and JRs disposed of by the registrar, the case management officer or authorized personnel or by operation of the rules" onchange="javascript:calculateField_1_1_7();">
+
+
+        <input hidden class="form-control" id="txtFIELD1_1_5" name="txtFIELD1_1_5" type="number" min="0" asp-for="@Model.txtFIELD1_1_5" autocomplete="txtFIELD1_1_5" data-rule-minlength="1" style="width:100%"
+               data-num="1.1.5" data-msg="Number of civil appeals, cross-appeals, references, and JRs settled by judicial mediation" onchange="javascript:calculateField_1_1_7();">
+
+
+        <input hidden class="form-control" id="txtFIELD1_1_6" name="txtFIELD1_1_6" type="number" min="0" asp-for="@Model.txtFIELD1_1_6" autocomplete="txtFIELD1_1_6" data-rule-minlength="1" style="width:100%"
+               data-num="1.1.6" data-msg="Number of civil appeals, cross-appeals, references, and JRs disposed of by other means" onchange="javascript:calculateField_1_1_7();">
+
+
+        <input hidden class="form-control" id="txtFIELD1_1_7" name="txtFIELD1_1_7" type="number" min="0" asp-for="@Model.txtFIELD1_1_7" autocomplete="txtFIELD1_1_7" data-rule-minlength="1" style="width:100%"
+               data-num="1.1.7" data-msg="Total number of civil appeals, cross-appeals, references, and JRs">
+
+        <input hidden class="form-control" id="txtFIELD1_2_1" name="txtFIELD1_2_1" type="number" min="0" asp-for="@Model.txtFIELD1_2_1" autocomplete="txtFIELD1_2_1" data-rule-minlength="1" style="width:100%"
+               data-num="1.2.1" data-msg="Number of civil appeals, cross-appeals, references, and JRs filed of criminal appeals, cross-appeals, references and bail Results filed but still pending as of December 31<sup>st</sup> of the previous year" onchange="javascript:calculateField_1_2_5();">
+
+
+        <input hidden class="form-control" id="txtFIELD1_2_2" name="txtFIELD1_2_2" type="number" min="0" asp-for="@Model.txtFIELD1_2_2" autocomplete="txtFIELD1_2_2" data-rule-minlength="1" style="width:100%"
+               data-num="1.2.2" data-msg="Number of civil appeals, cross-appeals, references, and JRs filed of criminal  appeals, cross-appeals, references and bail Results filed" onchange="javascript:calculateField_1_2_5();">
+
+
+        <input hidden class="form-control" id="txtFIELD1_2_3" name="txtFIELD1_2_3" type="number" min="0" asp-for="@Model.txtFIELD1_2_3" autocomplete="txtFIELD1_2_3" data-rule-minlength="1" style="width:100%"
+               data-num="1.2.3" data-msg="Number of criminal appeals, cross-appeals, references and bail Results disposed of by judgment" onchange="javascript:calculateField_1_2_5();">
+
+
+        <input hidden class="form-control" id="txtFIELD1_2_4" name="txtFIELD1_2_4" type="number" min="0" asp-for="@Model.txtFIELD1_2_4" autocomplete="txtFIELD1_2_4" data-rule-minlength="1" style="width:100%"
+               data-num="1.2.4" data-msg="Number of criminal appeals, cross-appeals, references and bail Results disposed of by other means" onchange="javascript:calculateField_1_2_5();">
+
+
+        <input hidden class="form-control" id="txtFIELD1_2_5" name="txtFIELD1_2_5" type="number" min="0" asp-for="@Model.txtFIELD1_2_5" autocomplete="txtFIELD1_2_5" data-rule-minlength="1" style="width:100%"
+               data-num="1.2.5" data-msg="Total number of criminal  appeals, cross-appeals, references and bail Results">
+
+        <textarea hidden class="form-control" id="txtFIELD_1_Comments" name="txtFIELD_1_Comments" type="text" asp-for="@Model.txtFIELD_1_Comments" autocomplete="txtFIELD_1_Comments" data-rule-maxlength="2000" style="width:100%" multiple="true" rows="4">
+                                </textarea>
+
+
+        <input hidden class="form-control" id="txtFIELD2_1_1" name="txtFIELD2_1_1" type="number" min="0" asp-for="@Model.txtFIELD2_1_1" autocomplete="txtFIELD2_1_1" data-rule-minlength="1" style="width:100%"
+               data-num="2.1.1" data-msg="Number of civil appeals, cross-appeals, references, and JRs filed of civil case decisions given at hearing">
+
+        <input hidden class="form-control" id="txtFIELD2_1_2" name="txtFIELD2_1_2" type="number" min="0" asp-for="@Model.txtFIELD2_1_2" autocomplete="txtFIELD2_1_2" data-rule-minlength="1" style="width:100%"
+               data-num="2.1.2" data-msg="Number of civil case reserved decisions">
+
+        <input hidden class="form-control" id="txtFIELD2_2_1" name="txtFIELD2_2_1" type="number" min="0" asp-for="@Model.txtFIELD2_2_1" autocomplete="txtFIELD2_2_1" data-rule-minlength="1" style="width:100%"
+               data-num="2.2.1" data-msg="Number of criminal case decisions given at hearing">
+
+        <input hidden class="form-control" id="txtFIELD2_2_1_1" name="txtFIELD2_2_1_1" type="number" min="0" asp-for="@Model.txtFIELD2_2_1_1" autocomplete="txtFIELD2_2_1_1" data-rule-minlength="1" style="width:100%"
+               data-num="2.2.1.1" data-msg="Number of convictions/acquittals given at hearing">
+
+        <input hidden class="form-control" id="txtFIELD2_2_1_2" name="txtFIELD2_2_1_2" type="number" min="0" asp-for="@Model.txtFIELD2_2_1_2" autocomplete="txtFIELD2_2_1_2" data-rule-minlength="1" style="width:100%"
+               data-num="2.2.1.2" data-msg="Number of sentences given at hearing">
+
+        <input hidden class="form-control" id="txtFIELD2_2_1_3" name="txtFIELD2_2_1_3" type="number" min="0" asp-for="@Model.txtFIELD2_2_1_3" autocomplete="txtFIELD2_2_1_3" data-rule-minlength="1" style="width:100%"
+               data-num="2.2.1.3" data-msg="Number of other criminal appeals given at hearing">
+
+        <input hidden class="form-control" id="txtFIELD2_2_2" name="txtFIELD2_2_2" type="number" min="0" asp-for="@Model.txtFIELD2_2_2" autocomplete="txtFIELD2_2_2" data-rule-minlength="1" style="width:100%"
+               data-num="2.2.2" data-msg="Number of criminal case decisions filed after reserving">
+
+        <input hidden class="form-control" id="txtFIELD2_2_2_1" name="txtFIELD2_2_2_1" type="number" min="0" asp-for="@Model.txtFIELD2_2_2_1" autocomplete="txtFIELD2_2_2_1" data-rule-minlength="1" style="width:100%"
+               data-num="2.2.2.1" data-msg="Number of convictions/acquittals filed after reserving">
+
+        <input hidden class="form-control" id="txtFIELD2_2_2_2" name="txtFIELD2_2_2_2" type="number" min="0" asp-for="@Model.txtFIELD2_2_2_2" autocomplete="txtFIELD2_2_2_2" data-rule-minlength="1" style="width:100%"
+               data-num="2.2.2.2" data-msg="Number of sentences filed after reserving">
+
+        <input hidden class="form-control" id="txtFIELD2_2_2_3" name="txtFIELD2_2_2_3" type="number" min="0" asp-for="@Model.txtFIELD2_2_2_3" autocomplete="txtFIELD2_2_2_3" data-rule-minlength="1" style="width:100%"
+               data-num="2.2.2.3" data-msg="Number of other criminal appeals filed after reserving">
+
+        <textarea hidden class="form-control" id="txtFIELD_2_Comments" name="txtFIELD_2_Comments" type="text" asp-for="@Model.txtFIELD_2_Comments" autocomplete="txtFIELD_2_Comments" data-rule-maxlength="2000" style="width:100%" multiple="true" rows="4">
+                                </textarea>
+
+        <input hidden class="form-control" id="txtFIELD3_1" name="txtFIELD3_1" type="number" min="0" asp-for="@Model.txtFIELD3_1" autocomplete="txtFIELD3_1" data-rule-minlength="1" style="width:100%"
+               data-num="3.1" data-msg="Number of Bench decisions/judgments">
+
+        <input hidden class="form-control" id="txtFIELD3_2" name="txtFIELD3_2" type="number" min="0" asp-for="@Model.txtFIELD3_2" autocomplete="txtFIELD3_2" data-rule-minlength="1" style="width:100%"
+               data-num="3.2" data-msg="Number of reserved decisions/judgments">
+
+        <textarea hidden class="form-control" id="txtFIELD_3_Comments" name="txtFIELD_3_Comments" type="text" asp-for="@Model.txtFIELD_3_Comments" autocomplete="txtFIELD_3_Comments" data-rule-maxlength="2000" style="width:100%" multiple="true" rows="4">
+                                </textarea>
+
+        <input hidden class="form-control" id="txtFIELD4_1_1" name="txtFIELD4_1_1" type="number" min="0" asp-for="@Model.txtFIELD4_1_1" autocomplete="txtFIELD4_1_1" data-rule-minlength="1" style="width:100%"
+               data-num="4.1.1" data-msg="Number of civil appeals where the interval from the notice of appeal to filing of the appellant’s factum took less than 6 months">
+
+        <input hidden class="form-control" id="txtFIELD4_1_2" name="txtFIELD4_1_2" type="number" min="0" asp-for="@Model.txtFIELD4_1_2" autocomplete="txtFIELD4_1_2" data-rule-minlength="1" style="width:100%"
+               data-num="4.1.2" data-msg="Number of civil appeals where the interval from the notice of appeal to filing of the appellant’s factum took between 6 to 12 months">
+
+        <input hidden class="form-control" id="txtFIELD4_1_3" name="txtFIELD4_1_3" type="number" min="0" asp-for="@Model.txtFIELD4_1_3" autocomplete="txtFIELD4_1_3" data-rule-minlength="1" style="width:100%"
+               data-num="4.1.3" data-msg="Number of civil appeals where the interval from the notice of appeal to filing of the appellant’s factum took more than 12 months">
+
+        <input hidden class="form-control" id="txtFIELD4_1_4_1" name="txtFIELD4_1_4_1" type="number" min="0" asp-for="@Model.txtFIELD4_1_4_1" autocomplete="txtFIELD4_1_4_1" data-rule-minlength="1" style="width:100%"
+               data-num="4.1.4.1" data-msg="Conviction/acquittal">
+
+        <input hidden class="form-control" id="txtFIELD4_1_4_2" name="txtFIELD4_1_4_2" type="number" min="0" asp-for="@Model.txtFIELD4_1_4_2" autocomplete="txtFIELD4_1_4_2" data-rule-minlength="1" style="width:100%"
+               data-num="4.1.4.2" data-msg="Sentence">
+
+        <input hidden class="form-control" id="txtFIELD4_1_4_3" name="txtFIELD4_1_4_3" type="number" min="0" asp-for="@Model.txtFIELD4_1_4_3" autocomplete="txtFIELD4_1_4_3" data-rule-minlength="1" style="width:100%"
+               data-num="4.1.4.3" data-msg="Other">
+
+        <input hidden class="form-control" id="txtFIELD4_1_5_1" name="txtFIELD4_1_5_1" type="number" min="0" asp-for="@Model.txtFIELD4_1_5_1" autocomplete="txtFIELD4_1_5_1" data-rule-minlength="1" style="width:100%"
+               data-num="4.1.5.1" data-msg="Conviction/acquittal">
+
+        <input hidden class="form-control" id="txtFIELD4_1_5_2" name="txtFIELD4_1_5_2" type="number" min="0" asp-for="@Model.txtFIELD4_1_5_2" autocomplete="txtFIELD4_1_5_2" data-rule-minlength="1" style="width:100%"
+               data-num="4.1.5.2" data-msg="Sentence">
+
+        <input hidden class="form-control" id="txtFIELD4_1_5_3" name="txtFIELD4_1_5_3" type="number" min="0" asp-for="@Model.txtFIELD4_1_5_3" autocomplete="txtFIELD4_1_5_3" data-rule-minlength="1" style="width:100%"
+               data-num="4.1.5.3" data-msg="Other">
+
+        <input hidden class="form-control" id="txtFIELD4_1_6_1" name="txtFIELD4_1_6_1" type="number" min="0" asp-for="@Model.txtFIELD4_1_6_1" autocomplete="txtFIELD4_1_6_1" data-rule-minlength="1" style="width:100%"
+               data-num="4.1.6.1" data-msg="Conviction/acquittal">
+
+        <input hidden class="form-control" id="txtFIELD4_1_6_2" name="txtFIELD4_1_6_2" type="number" min="0" asp-for="@Model.txtFIELD4_1_6_2" autocomplete="txtFIELD4_1_6_2" data-rule-minlength="1" style="width:100%"
+               data-num="4.1.6.2" data-msg="Sentence">
+
+        <input hidden class="form-control" id="txtFIELD4_1_6_3" name="txtFIELD4_1_6_3" type="number" min="0" asp-for="@Model.txtFIELD4_1_6_3" autocomplete="txtFIELD4_1_6_3" data-rule-minlength="1" style="width:100%"
+               data-num="4.1.6.3" data-msg="Other">
+
+        <input hidden class="form-control" id="txtFIELD4_2_1" name="txtFIELD4_2_1" type="number" min="0" asp-for="@Model.txtFIELD4_2_1" autocomplete="txtFIELD4_2_1" data-rule-minlength="1" style="width:100%"
+               data-num="4.2.1" data-msg="Number of civil appeals where the time interval from filing of the appellant’s factum to the hearing took less than 6 months">
+
+
+        <input hidden class="form-control" id="txtFIELD4_2_2" name="txtFIELD4_2_2" type="number" min="0" asp-for="@Model.txtFIELD4_2_2" autocomplete="txtFIELD4_2_2" data-rule-minlength="1" style="width:100%"
+               data-num="4.2.2" data-msg="Number of civil appeals where the time interval from filing of the appellant’s factum to the hearing took between 6 to 12 months">
+
+
+        <input hidden class="form-control" id="txtFIELD4_2_3" name="txtFIELD4_2_3" type="number" min="0" asp-for="@Model.txtFIELD4_2_3" autocomplete="txtFIELD4_2_3" data-rule-minlength="1" style="width:100%"
+               data-num="4.2.3" data-msg="Number of civil appeals where the time interval from filing of the appellant’s factum to the hearing took more than 12 months">
+
+        <input hidden class="form-control" id="txtFIELD4_2_4_1" name="txtFIELD4_2_4_1" type="number" min="0" asp-for="@Model.txtFIELD4_2_4_1" autocomplete="txtFIELD4_2_4_1" data-rule-minlength="1" style="width:100%"
+               data-num="4.2.4.1" data-msg="Conviction/acquittal">
+
+        <input hidden class="form-control" id="txtFIELD4_2_4_2" name="txtFIELD4_2_4_2" type="number" min="0" asp-for="@Model.txtFIELD4_2_4_2" autocomplete="txtFIELD4_2_4_2" data-rule-minlength="1" style="width:100%"
+               data-num="4.2.4.2" data-msg="Sentence">
+
+        <input hidden class="form-control" id="txtFIELD4_2_4_3" name="txtFIELD4_2_4_3" type="number" min="0" asp-for="@Model.txtFIELD4_2_4_3" autocomplete="txtFIELD4_2_4_3" data-rule-minlength="1" style="width:100%"
+               data-num="4.2.4.3" data-msg="Other">
+
+        <input hidden class="form-control" id="txtFIELD4_2_5_1" name="txtFIELD4_2_5_1" type="number" min="0" asp-for="@Model.txtFIELD4_2_5_1" autocomplete="txtFIELD4_2_5_1" data-rule-minlength="1" style="width:100%"
+               data-num="4.2.5.1" data-msg="Conviction/acquittal">
+
+        <input hidden class="form-control" id="txtFIELD4_2_5_2" name="txtFIELD4_2_5_2" type="number" min="0" asp-for="@Model.txtFIELD4_2_5_2" autocomplete="txtFIELD4_2_5_2" data-rule-minlength="1" style="width:100%"
+               data-num="4.2.5.2" data-msg="Sentence">
+
+        <input hidden class="form-control" id="txtFIELD4_2_5_3" name="txtFIELD4_2_5_3" type="number" min="0" asp-for="@Model.txtFIELD4_2_5_3" autocomplete="txtFIELD4_2_5_3" data-rule-minlength="1" style="width:100%"
+               data-num="4.2.5.3" data-msg="Other">
+
+        <input hidden class="form-control" id="txtFIELD4_2_6_1" name="txtFIELD4_2_6_1" type="number" min="0" asp-for="@Model.txtFIELD4_2_6_1" autocomplete="txtFIELD4_2_6_1" data-rule-minlength="1" style="width:100%"
+               data-num="4.2.6.1" data-msg="Conviction/acquittal">
+
+        <input hidden class="form-control" id="txtFIELD4_2_6_2" name="txtFIELD4_2_6_2" type="number" min="0" asp-for="@Model.txtFIELD4_2_6_2" autocomplete="txtFIELD4_2_6_2" data-rule-minlength="1" style="width:100%"
+               data-num="4.2.6.2" data-msg="Sentence">
+
+        <input hidden class="form-control" id="txtFIELD4_2_6_3" name="txtFIELD4_2_6_3" type="number" min="0" asp-for="@Model.txtFIELD4_2_6_3" autocomplete="txtFIELD4_2_6_3" data-rule-minlength="1" style="width:100%"
+               data-num="4.2.6.3" data-msg="Other">
+
+
+
+
+        <input hidden class="form-control" id="txtFIELD4_3_1" name="txtFIELD4_3_1" type="number" min="0" asp-for="@Model.txtFIELD4_3_1" autocomplete="txtFIELD4_3_1" data-rule-minlength="1" style="width:100%"
+               data-num="4.3.1" data-msg="Number of civil appeals where the time interval from the hearing to the final decision took less than 6 months">
+
+        <input hidden class="form-control" id="txtFIELD4_3_2" name="txtFIELD4_3_2" type="number" min="0" asp-for="@Model.txtFIELD4_3_2" autocomplete="txtFIELD4_3_2" data-rule-minlength="1" style="width:100%"
+               data-num="4.3.2" data-msg="Number of civil appeals where the time interval from the hearing to the final decision took between 6 to 12 months">
+
+        <input hidden class="form-control" id="txtFIELD4_3_3" name="txtFIELD4_3_3" type="number" min="0" asp-for="@Model.txtFIELD4_3_3" autocomplete="txtFIELD4_3_3" data-rule-minlength="1" style="width:100%"
+               data-num="4.3.3" data-msg="Number of civil appeals where the time interval from the hearing to the final decision took more than 12 months">
+
+        <input hidden class="form-control" id="txtFIELD4_3_4_1" name="txtFIELD4_3_4_1" type="number" min="0" asp-for="@Model.txtFIELD4_3_4_1" autocomplete="txtFIELD4_3_4_1" data-rule-minlength="1" style="width:100%"
+               data-num="4.3.4.1" data-msg="Conviction/acquittal">
+
+        <input hidden class="form-control" id="txtFIELD4_3_4_2" name="txtFIELD4_3_4_2" type="number" min="0" asp-for="@Model.txtFIELD4_3_4_2" autocomplete="txtFIELD4_3_4_2" data-rule-minlength="1" style="width:100%"
+               data-num="4.3.4.2" data-msg="Sentence">
+
+        <input hidden class="form-control" id="txtFIELD4_3_4_3" name="txtFIELD4_3_4_3" type="number" min="0" asp-for="@Model.txtFIELD4_3_4_3" autocomplete="txtFIELD4_3_4_3" data-rule-minlength="1" style="width:100%"
+               data-num="4.3.4.3" data-msg="Other">
+
+        <input hidden class="form-control" id="txtFIELD4_3_5_1" name="txtFIELD4_3_5_1" type="number" min="0" asp-for="@Model.txtFIELD4_3_5_1" autocomplete="txtFIELD4_3_5_1" data-rule-minlength="1" style="width:100%"
+               data-num="4.3.5.1" data-msg="Conviction/acquittal">
+
+        <input hidden class="form-control" id="txtFIELD4_3_5_2" name="txtFIELD4_3_5_2" type="number" min="0" asp-for="@Model.txtFIELD4_3_5_2" autocomplete="txtFIELD4_3_5_2" data-rule-minlength="1" style="width:100%"
+               data-num="4.3.5.2" data-msg="Sentence">
+
+        <input hidden class="form-control" id="txtFIELD4_3_5_3" name="txtFIELD4_3_5_3" type="number" min="0" asp-for="@Model.txtFIELD4_3_5_3" autocomplete="txtFIELD4_3_5_3" data-rule-minlength="1" style="width:100%"
+               data-num="4.3.5.3" data-msg="Other">
+
+        <input hidden class="form-control" id="txtFIELD4_3_6_1" name="txtFIELD4_3_6_1" type="number" min="0" asp-for="@Model.txtFIELD4_3_6_1" autocomplete="txtFIELD4_3_6_1" data-rule-minlength="1" style="width:100%"
+               data-num="4.3.6.1" data-msg="Conviction/acquittal">
+
+        <input hidden class="form-control" id="txtFIELD4_3_6_2" name="txtFIELD4_3_6_2" type="number" min="0" asp-for="@Model.txtFIELD4_3_6_2" autocomplete="txtFIELD4_3_6_2" data-rule-minlength="1" style="width:100%"
+               data-num="4.3.6.2" data-msg="Sentence">
+
+        <input hidden class="form-control" id="txtFIELD4_3_6_3" name="txtFIELD4_3_6_3" type="number" min="0" asp-for="@Model.txtFIELD4_3_6_3" autocomplete="txtFIELD4_3_6_3" data-rule-minlength="1" style="width:100%"
+               data-num="4.3.6.3" data-msg="Other">
+
+        <textarea hidden class="form-control" id="txtFIELD_4_Comments" name="txtFIELD_4_Comments" type="text" asp-for="@Model.txtFIELD_4_Comments" autocomplete="txtFIELD_4_Comments" data-rule-maxlength="2000" style="width:100%" multiple="true" rows="4">
+                                </textarea>
+
+
+
+        <input hidden class="form-control" id="txtFIELD5_1" name="txtFIELD5_1" type="number" min="0" asp-for="@Model.txtFIELD5_1" autocomplete="txtFIELD5_1" data-rule-minlength="1" style="width:100%"
+               data-num="5.1" data-msg="In-person hearings" onchange="javascript:calculateField_5_4();">
+
+        <input hidden class="form-control" id="txtFIELD5_2" name="txtFIELD5_2" type="number" asp-for="@Model.txtFIELD5_2" autocomplete="txtFIELD5_2" data-rule-minlength="1" style="width:100%"
+               data-num="5.2" data-msg="Virtual hearings" onchange="javascript:calculateField_5_4();">
+
+        <input hidden class="form-control" id="txtFIELD5_3" name="txtFIELD5_3" type="number" min="0" asp-for="@Model.txtFIELD5_3" autocomplete="txtFIELD5_3" data-rule-minlength="1" style="width:100%"
+               data-num="5.3" data-msg="Hybrid hearings" onchange="javascript:calculateField_5_4();">
+
+        <input hidden class="form-control" id="txtFIELD5_4" name="txtFIELD5_4" type="number" min="0" asp-for="@Model.txtFIELD5_4" autocomplete="txtFIELD5_4" data-rule-minlength="1" style="width:100%"
+               data-num="5.4" data-msg="Total number of hearings held in-person, virtually and in hybrid mode">
+
+        <textarea hidden class="form-control" id="txtFIELD_5_Comments" name="txtFIELD_5_Comments" type="text" asp-for="@Model.txtFIELD_5_Comments" autocomplete="txtFIELD_5_Comments" data-rule-maxlength="2000" style="width:100%" multiple="true" rows="4">
+                            </textarea>
+
+
+
+
+        <input hidden class="form-control" id="txtFIELD6_1_1" name="txtFIELD6_1_1" type="number" min="0" asp-for="@Model.txtFIELD6_1_1" autocomplete="txtFIELD6_1_1" data-rule-minlength="1" style="width:100%"
+               data-num="6.1.1" data-msg="Number of motions and applications filed before a single judge">
+
+        <input hidden class="form-control" id="txtFIELD6_1_2" name="txtFIELD6_1_2" type="number" min="0" asp-for="@Model.txtFIELD6_1_2" autocomplete="txtFIELD6_1_2" data-rule-minlength="1" style="width:100%"
+               data-num="6.1.2" data-msg="Number of motions and applications disposed of by order of a single judge">
+
+        <input hidden class="form-control" id="txtFIELD6_1_3" name="txtFIELD6_1_3" type="number" min="0" asp-for="@Model.txtFIELD6_1_3" autocomplete="txtFIELD6_1_3" data-rule-minlength="1" style="width:100%"
+               data-num="6.1.3" data-msg="Number of motions and applications before a single judge that were abandoned, withdrawn or dismissed administratively">
+
+        <input hidden class="form-control" id="txtFIELD6_2_1" name="txtFIELD6_2_1" type="number" min="0" asp-for="@Model.txtFIELD6_2_1" autocomplete="txtFIELD6_2_1" data-rule-minlength="1" style="width:100%"
+               data-num="6.2.1" data-msg="Number of motions and applications filed before a panel of three or more judges">
+
+        <input hidden class="form-control" id="txtFIELD6_2_2" name="txtFIELD6_2_2" type="number" min="0" asp-for="@Model.txtFIELD6_2_2" autocomplete="txtFIELD6_2_2" data-rule-minlength="1" style="width:100%"
+               data-num="6.2.2" data-msg="Number of motions and applications disposed of by order of a panel of three or more judges">
+
+        <input hidden class="form-control" id="txtFIELD6_2_3" name="txtFIELD6_2_3" type="number" min="0" asp-for="@Model.txtFIELD6_2_3" autocomplete="txtFIELD6_2_3" data-rule-minlength="1" style="width:100%"
+               data-num="6.2.3" data-msg="Number of panel motions and applications that were abandoned, withdrawn or dismissed administratively">
+
+        <input hidden class="form-control" id="txtFIELD6_3_1" name="txtFIELD6_3_1" type="number" min="0" asp-for="@Model.txtFIELD6_3_1" autocomplete="txtFIELD6_3_1" data-rule-minlength="1" style="width:100%"
+               data-num="6.3.1" data-msg="Number of motions and applications filed before a registrar">
+
+        <input hidden class="form-control" id="txtFIELD6_3_2" name="txtFIELD6_3_2" type="number" min="0" asp-for="@Model.txtFIELD6_3_2" autocomplete="txtFIELD6_3_2" data-rule-minlength="1" style="width:100%"
+               data-num="6.3.2" data-msg="Number of motions and applications disposed of by order of a registrar">
+
+        <input hidden class="form-control" id="txtFIELD6_3_3" name="txtFIELD6_3_3" type="number" min="0" asp-for="@Model.txtFIELD6_3_3" autocomplete="txtFIELD6_3_3" data-rule-minlength="1" style="width:100%"
+               data-num="6.3.3" data-msg="Number of panel motions and applications that were abandoned, withdrawn or dismissed by a registrar or for administrative reasons">
+
+        <textarea hidden class="form-control" id="txtFIELD_6_Comments" name="txtFIELD_6_Comments" type="text" asp-for="@Model.txtFIELD_6_Comments" autocomplete="txtFIELD_6_Comments" data-rule-maxlength="2000" style="width:100%" multiple="true" rows="4">
+                            </textarea>
+
+        <input hidden class="form-control" id="txtFIELD7_1_1" name="txtFIELD7_1_1" type="number" min="0" asp-for="@Model.txtFIELD7_1_1" autocomplete="txtFIELD7_1_1" data-rule-minlength="1" style="width:100%"
+               data-num="7.1.1" data-msg="Number of appeals involving an SRL at the hearing of the appeal on the merits" onchange="javascript:calculateField_7_1_3();">
+
+        <input hidden class="form-control" id="txtFIELD7_1_2" name="txtFIELD7_1_2" type="number" min="0" asp-for="@Model.txtFIELD7_1_2" autocomplete="txtFIELD7_1_2" data-rule-minlength="1" style="width:100%"
+               data-num="7.1.2" data-msg="Number of motions and applications involving an SRL at the hearing of a motion or an application (by a single judge, a panel or the registrar)" onchange="javascript:calculateField_7_1_3();">
+
+        <input hidden class="form-control" id="txtFIELD7_1_3" name="txtFIELD7_1_3" type="number" min="0" asp-for="@Model.txtFIELD7_1_3" autocomplete="txtFIELD7_1_3" data-rule-minlength="1" style="width:100%"
+               data-num="7.1.3" data-msg="Total number of appeals, motions and applications involving an SRL at the hearing">
+
+        <textarea hidden class="form-control" id="txtFIELD_7_Comments" name="txtFIELD_7_Comments" type="text" asp-for="@Model.txtFIELD_7_Comments" autocomplete="txtFIELD_7_Comments" data-rule-maxlength="2000" style="width:100%" multiple="true" rows="4">
+                            </textarea>
+
+        <input hidden class="form-control" id="txtFIELD8_1" name="txtFIELD8_1" type="number" min="0" asp-for="@Model.txtFIELD8_1" autocomplete="txtFIELD8_1" data-rule-minlength="1" style="width:100%"
+               data-num="8.1" data-msg="Less than 6 months">
+
+        <input hidden class="form-control" id="txtFIELD8_2" name="txtFIELD8_2" type="number" min="0" asp-for="@Model.txtFIELD8_2" autocomplete="txtFIELD8_2" data-rule-minlength="1" style="width:100%"
+               data-num="8.2" data-msg="Between 6 to 12 months">
+
+        <input hidden class="form-control" id="txtFIELD8_3" name="txtFIELD8_3" type="number" min="0" asp-for="@Model.txtFIELD8_3" autocomplete="txtFIELD8_3" data-rule-minlength="1" style="width:100%"
+               data-num="8.3" data-msg="More than 12 months">
+
+        <textarea hidden class="form-control" id="txtFIELD_8_Comments" name="txtFIELD_8_Comments" type="text" asp-for="@Model.txtFIELD_8_Comments" autocomplete="txtFIELD_8_Comments" data-rule-maxlength="2000" style="width:100%" multiple="true" rows="4">
+                            </textarea>
+
+        <input hidden class="form-control" id="txtFIELD9_1" name="txtFIELD9_1" type="number" min="0" asp-for="@Model.txtFIELD9_1" autocomplete="txtFIELD9_1" data-rule-minlength="1" style="width:100%"
+               data-num="9.1" data-msg="By a 3-member panel hearings">
+
+        <input hidden class="form-control" id="txtFIELD9_2" name="txtFIELD9_2" type="number" min="0" asp-for="@Model.txtFIELD9_2" autocomplete="txtFIELD9_2" data-rule-minlength="1" style="width:100%"
+               data-num="9.2" data-msg="By a 5-member panel hearings">
+
+        <textarea hidden class="form-control" id="txtFIELD_9_Comments" name="txtFIELD_9_Comments" type="text" asp-for="@Model.txtFIELD_9_Comments" autocomplete="txtFIELD_9_Comments" data-rule-maxlength="2000" style="width:100%" multiple="true" rows="4">
+                            </textarea>
+
+        <input hidden class="form-control" id="txtFIELD10_1" name="txtFIELD10_1" type="number" min="0" asp-for="@Model.txtFIELD10_1" autocomplete="txtFIELD10_1" data-rule-minlength="1" style="width:100%"
+               data-num="10.1" data-msg="Number of appeals, cross-appeals, references, bail Results and JRs that have not been finalized as of December 31<sup>st</sup>">
+
+        <textarea hidden class="form-control" id="txtFIELD_10_Comments" name="txtFIELD_10_Comments" type="text" asp-for="@Model.txtFIELD_10_Comments" autocomplete="txtFIELD_10_Comments" data-rule-maxlength="2000" style="width:100%" multiple="true" rows="4">
+                            </textarea>
+
+        <input hidden class="form-control" id="txtFIELD11_1" name="txtFIELD11_1" type="number" min="0" asp-for="@Model.txtFIELD11_1" autocomplete="txtFIELD11_1" data-rule-minlength="1" style="width:100%"
+               data-num="11.1" data-msg="Regular judges">
+
+        <input hidden class="form-control" id="txtFIELD11_2" name="txtFIELD11_2" type="number" min="0" asp-for="@Model.txtFIELD11_2" autocomplete="txtFIELD11_2" data-rule-minlength="1" style="width:100%"
+               data-num="11.2" data-msg="Supernumerary judges">
+
+        <textarea hidden class="form-control" id="txtFIELD_11_Comments" name="txtFIELD_11_Comments" type="text" asp-for="@Model.txtFIELD_11_Comments" autocomplete="txtFIELD_11_Comments" data-rule-maxlength="2000" style="width:100%" multiple="true" rows="4">
+                            </textarea>
+
+        <textarea hidden class="form-control" id="txtFIELD_12_Comments" name="txtFIELD_12_Comments" type="text" asp-for="@Model.txtFIELD_12_Comments" autocomplete="txtFIELD_12_Comments" data-rule-maxlength="2000" style="width:100%" multiple="true" rows="4">
+                            </textarea>
+
+        <br />
+        @* <div class="text-center">
+            <span class="col-md-6 text-right">
+                <a class="btn btn-primary cjc-big-buttons"
+                   type="button"
+                   asp-page="/Result"
+                   asp-route-court="@Model.txtCOURT"
+                   asp-route-year="@Model.intREPORTINGYEAR">
+                    @localizer["ViewSubmission"]
+                </a>
+            </span>
+            <span class="col-md-6 text-left">
+                <a class="btn btn-primary cjc-big-buttons" asp-page="./Report2">@localizer["Generate"]</a>
+            </span>
+        </div> *@
+        <br />
+        <a class="btn btn-primary" style="color:white;width:200px;height:90px;text-align:center;border-radius:12px;" href="/Select"><span><br />@localizer["Back"]</span></a><br />
+    </form>
+</div>
+<script>
+        function setYears(elemId, selectedYear) {
+        const select = document.getElementById(elemId);
+
+        if (select != null) {
+            const currentYear = new Date().getFullYear();
+
+            // Loop from currentYear - 2 to currentYear + 2
+            for (let year = currentYear; year <= currentYear + 5; year++) {
+                const option = document.createElement("option");
+                option.value = year;
+                option.textContent = year;
+
+                if ((elemId != "intREPORTINGYEARReview") && (elemId != "intREPORTINGYEARResult")) {
+                    // Set current year as selected
+                    if (year === currentYear) {
+                        option.selected = true;
+                    }
+                }
+                else {
+                    if (year === selectedYear) {
+                        option.selected = true;
+                    }
+                }
+
+                select.appendChild(option);
+            }
+        }
+    }
+
+    //setYears("intREPORTINGYEARResult", @Model.intREPORTINGYEAR);
+</script>

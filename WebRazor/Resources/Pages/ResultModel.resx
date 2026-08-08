@@ -1,0 +1,903 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="1_1_4_Heading" xml:space="preserve">
+    <value>Number of civil appeals, cross-appeals, references, and JRs disposed of by the registrar, the case management officer or authorized personnel or by operation of the rules</value>
+  </data>
+  <data name="1_1_4_Heading1" xml:space="preserve">
+    <value>Number of civil appeals, cross-appeals, references, and JRs disposed of by the registrar, the case management officer or authorized personnel or by operation of the rules</value>
+  </data>
+  <data name="1_1_4_Info" xml:space="preserve">
+    <value>The civil appeals, cross-appeals, references, and JRs disposed of by the registrar take into account the certificates of lapse of appeal issued by the registry.</value>
+  </data>
+  <data name="1_1_4_Info1" xml:space="preserve">
+    <value>The civil appeals, cross-appeals, references, and JRs disposed of by the registrar take into account the certificates of lapse of appeal issued by the registry.</value>
+  </data>
+  <data name="1_Heading" xml:space="preserve">
+    <value>Number of appeals, cross-appeals, references, bail reviews, and judicial reviews (JRs)</value>
+  </data>
+  <data name="1_Heading1" xml:space="preserve">
+    <value>Number of appeals, cross-appeals, references, bail reviews, and judicial reviews (JRs)</value>
+  </data>
+  <data name="1_Info" xml:space="preserve">
+    <value>One notice of appeal counts as one appeal filed and one appeal disposed of, even though a number of related cases may be grouped together and heard at one hearing (example: if 10 cases are grouped together and heard together but are the subject of 10 notices of appeal, this counts as 10 appeals filed and 10 appeals disposed of). A notice of appeal containing both an appeal against conviction and against sentence, shall be counted as two appeals, but when heard together shall be counted as a single hearing.&lt;br /&gt;&lt;br /&gt;Where an appeal was deemed abandoned or struck in the previous calendar year and restored in this calendar year, it is counted as a new appeal filed.&lt;br /&gt;&lt;br /&gt;Cross-appeals are to be collected &lt;u&gt;only&lt;/u&gt; if they are docket as a separate appeal.</value>
+  </data>
+  <data name="1_Info1" xml:space="preserve">
+    <value>One notice of appeal counts as one appeal filed and one appeal disposed of, even though a number of related cases may be grouped together and heard at one hearing (example: if 10 cases are grouped together and heard together but are the subject of 10 notices of appeal, this counts as 10 appeals filed and 10 appeals disposed of). A notice of appeal containing both an appeal against conviction and against sentence, shall be counted as two appeals, but when heard together shall be counted as a single hearing.&lt;br /&gt;&lt;br /&gt;Where an appeal was deemed abandoned or struck in the previous calendar year and restored in this calendar year, it is counted as a new appeal filed.&lt;br /&gt;&lt;br /&gt;Cross-appeals are to be collected &lt;u&gt;only&lt;/u&gt; if they are docket as a separate appeal.</value>
+  </data>
+  <data name="Alert_DraftFound_AskLoad" xml:space="preserve">
+    <value>A draft record found. Do you want to load it?</value>
+  </data>
+  <data name="Alert_DraftSavedFailed" xml:space="preserve">
+    <value>The draft save failed.</value>
+  </data>
+  <data name="Alert_DraftSavedSuccess" xml:space="preserve">
+    <value>Success - The draft was saved successfully - Close</value>
+  </data>
+  <data name="Alert_RecordDeleteFailed" xml:space="preserve">
+    <value>The record delete failed.</value>
+  </data>
+  <data name="Alert_RecordRetrievalFailed" xml:space="preserve">
+    <value>The record retrieval failed.</value>
+  </data>
+  <data name="Aria_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="Back1" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="BasicInfo_SectionTitle" xml:space="preserve">
+    <value>Name of Court and Reporting Year</value>
+  </data>
+  <data name="Btn_PreviousTab" xml:space="preserve">
+    <value>Previous Tab</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Comments" xml:space="preserve">
+    <value>Comments</value>
+  </data>
+  <data name="Common_ConvictionAcquittal" xml:space="preserve">
+    <value>Conviction/acquittal</value>
+  </data>
+  <data name="Common_Other" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="Common_Sentence" xml:space="preserve">
+    <value>Sentence</value>
+  </data>
+  <data name="CourtRequired" xml:space="preserve">
+    <value>Court is required</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Statistics</value>
+  </data>
+  <data name="Create1" xml:space="preserve">
+    <value>Statistics</value>
+  </data>
+  <data name="dob" xml:space="preserve">
+    <value>Date of Birth</value>
+  </data>
+  <data name="dob1" xml:space="preserve">
+    <value>Date of Birth</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="ErrorText" xml:space="preserve">
+    <value>Please correct following errors:</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="FirstName1" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="FirstNameRequired" xml:space="preserve">
+    <value>First Name is required</value>
+  </data>
+  <data name="FirstNameTwoChars" xml:space="preserve">
+    <value>First Name should be atleast two characters long</value>
+  </data>
+  <data name="FromDateRequired" xml:space="preserve">
+    <value>From Date is Required</value>
+  </data>
+  <data name="hdgCreateheading1" xml:space="preserve">
+    <value>Court Application (App)</value>
+  </data>
+  <data name="hdgDataEntryForm" xml:space="preserve">
+    <value>Data Entry Form</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Home1" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Info_SidebarAppearsAfterBasicInfo" xml:space="preserve">
+    <value>The sidebar tabs will appear once you fill the Name of Court and Reporting Year fields.</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="LastName1" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="LastNameRequired" xml:space="preserve">
+    <value>Last Name is required</value>
+  </data>
+  <data name="LastNameTwoChars" xml:space="preserve">
+    <value>Last Name should be atleast two characters long</value>
+  </data>
+  <data name="ReportingYearRequired" xml:space="preserve">
+    <value>Reporting Year is required</value>
+  </data>
+  <data name="Review" xml:space="preserve">
+    <value>Review</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="ToDateRequired" xml:space="preserve">
+    <value>To Date is required</value>
+  </data>
+  <data name="Modal_Validation_Title" xml:space="preserve">
+    <value>Please complete the following sections:</value>
+  </data>
+  <data name="Modal_DraftFound_Title" xml:space="preserve">
+    <value>Draft Found</value>
+  </data>
+  <data name="Sidebar_BasicInfo" xml:space="preserve">
+    <value>Name of Court and Reporting Year</value>
+  </data>
+  <data name="Sidebar_Tab1" xml:space="preserve">
+    <value>Tab 1 - Number of appeals, cross-appeals, references, bail reviews, and judicial reviews (JRs)</value>
+  </data>
+  <data name="Sidebar_Tab2" xml:space="preserve">
+    <value>Tab 2 - Civil and criminal case decisions</value>
+  </data>
+  <data name="Sidebar_Tab3" xml:space="preserve">
+    <value>Tab 3 - Number of decisions/judgments (total)</value>
+  </data>
+  <data name="Sidebar_Tab4" xml:space="preserve">
+    <value>Tab 4 - Civil and criminal case time intervals</value>
+  </data>
+  <data name="Sidebar_Tab5" xml:space="preserve">
+    <value>Tab 5 - Number of in-person, virtual and hybrid hearings</value>
+  </data>
+  <data name="Sidebar_Tab6" xml:space="preserve">
+    <value>Number of motions and applications</value>
+  </data>
+  <data name="Sidebar_Tab7" xml:space="preserve">
+    <value>Self-Represented Litigants (SRLs)</value>
+  </data>
+  <data name="Sidebar_Tab8" xml:space="preserve">
+    <value>Number of decisions/judgments rendered</value>
+  </data>
+  <data name="Sidebar_Tab9" xml:space="preserve">
+    <value>Number of appeals that are heard</value>
+  </data>
+  <data name="Sidebar_Tab10" xml:space="preserve">
+    <value>Total number of appeals, cross-appeals, references, bail reviews and JRs pending on December 31st</value>
+  </data>
+  <data name="Sidebar_Tab11" xml:space="preserve">
+    <value>Number of judges (as of December 31st)</value>
+  </data>
+  <data name="Sidebar_Tab12" xml:space="preserve">
+    <value>Additional comments and review statistics</value>
+  </data>
+  <data name="Validation_FormIncomplete" xml:space="preserve">
+    <value>Form Incomplete: All fields are mandatory. Please enter 0 to indicate that no data is being submitted.</value>
+  </data>
+  <data name="Lbl_NameOfCourt" xml:space="preserve">
+    <value>Name of Court</value>
+  </data>
+  <data name="Tip_Court" xml:space="preserve">
+    <value>The court for which the submission applies.</value>
+  </data>
+  <data name="Msg_NameOfCourt" xml:space="preserve">
+    <value>Please enter Name of Court</value>
+  </data>
+  <data name="Lbl_ReportingYear" xml:space="preserve">
+    <value>Reporting Year</value>
+  </data>
+  <data name="Tip_ReportingYear" xml:space="preserve">
+    <value>The reporting year for the data.</value>
+  </data>
+  <data name="Msg_ReportingYear" xml:space="preserve">
+    <value>Please enter Reporting Year</value>
+  </data>
+  <data name="Lbl_1_1_1" xml:space="preserve">
+    <value>Number of civil appeals, cross-appeals, references, and JRs filed but still pending as of December 31&lt;sup&gt;st&lt;/sup&gt; of the previous year</value>
+  </data>
+  <data name="Lbl_1_1_2" xml:space="preserve">
+    <value>Number of civil appeals, cross-appeals, references, and JRs filed</value>
+  </data>
+  <data name="Lbl_1_1_3" xml:space="preserve">
+    <value>Number of civil appeals, cross-appeals, references, and JRs disposed of by judgment</value>
+  </data>
+  <data name="Lbl_1_1_5" xml:space="preserve">
+    <value>Number of civil appeals, cross-appeals, references, and JRs settled by judicial mediation</value>
+  </data>
+  <data name="Lbl_1_1_6" xml:space="preserve">
+    <value>Number of civil appeals, cross-appeals, references, and JRs disposed of by other means</value>
+  </data>
+  <data name="Lbl_1_1_7" xml:space="preserve">
+    <value>Total number of civil appeals, cross-appeals, references, and JRs</value>
+  </data>
+  <data name="Lbl_1_1_Title" xml:space="preserve">
+    <value>Civil appeals, cross-appeals, references, and JRs filed, disposed of, and abandoned or withdrawn</value>
+  </data>
+  <data name="Lbl_1_2_1" xml:space="preserve">
+    <value>Number of criminal appeals, cross-appeals, references and bail reviews filed but still pending as of December 31&lt;sup&gt;st&lt;/sup&gt; of the previous year</value>
+  </data>
+  <data name="Lbl_1_2_2" xml:space="preserve">
+    <value>Number of criminal appeals, cross-appeals, references and bail reviews filed</value>
+  </data>
+  <data name="Lbl_1_2_3" xml:space="preserve">
+    <value>Number of criminal appeals, cross-appeals, references and bail reviews disposed of by judgment</value>
+  </data>
+  <data name="Lbl_1_2_4" xml:space="preserve">
+    <value>Number of criminal appeals, cross-appeals, references and bail reviews disposed of by other means</value>
+  </data>
+  <data name="Lbl_1_2_5" xml:space="preserve">
+    <value>Total number of criminal appeals, cross-appeals, references and bail reviews</value>
+  </data>
+  <data name="Lbl_1_2_CheckboxText" xml:space="preserve">
+    <value>Conviction appeal and sentence appeal are heard together</value>
+  </data>
+  <data name="Lbl_1_2_Title" xml:space="preserve">
+    <value>Criminal appeals, cross-appeals, references and bail reviews filed, disposed of, and abandoned or withdrawn.</value>
+  </data>
+  <data name="Lbl_2_1_1" xml:space="preserve">
+    <value>Number of civil case decisions given at hearing</value>
+  </data>
+  <data name="Lbl_2_1_2" xml:space="preserve">
+    <value>Number of civil case reserved decisions</value>
+  </data>
+  <data name="Lbl_2_1_Title" xml:space="preserve">
+    <value>Civil case decisions</value>
+  </data>
+  <data name="Lbl_2_2_1" xml:space="preserve">
+    <value>Number of criminal case decisions given at hearing</value>
+  </data>
+  <data name="Lbl_2_2_1_1" xml:space="preserve">
+    <value>Number of convictions/acquittals given at hearing</value>
+  </data>
+  <data name="Lbl_2_2_1_2" xml:space="preserve">
+    <value>Number of sentences given at hearing</value>
+  </data>
+  <data name="Lbl_2_2_1_3" xml:space="preserve">
+    <value>Number of other criminal appeals given at hearing</value>
+  </data>
+  <data name="Lbl_2_2_2" xml:space="preserve">
+    <value>Number of criminal case decisions filed after reserving</value>
+  </data>
+  <data name="Lbl_2_2_2_1" xml:space="preserve">
+    <value>Number of convictions/acquittals filed after reserving</value>
+  </data>
+  <data name="Lbl_2_2_2_2" xml:space="preserve">
+    <value>Number of sentences filed after reserving</value>
+  </data>
+  <data name="Lbl_2_2_2_3" xml:space="preserve">
+    <value>Number of other criminal appeals filed after reserving</value>
+  </data>
+  <data name="Lbl_2_2_Title" xml:space="preserve">
+    <value>Criminal case decisions</value>
+  </data>
+  <data name="Lbl_2_Heading" xml:space="preserve">
+    <value>Civil and criminal case decisions</value>
+  </data>
+  <data name="Lbl_3_1" xml:space="preserve">
+    <value>Number of Bench decisions/judgments</value>
+  </data>
+  <data name="Lbl_3_2" xml:space="preserve">
+    <value>Number of reserved decisions/judgments</value>
+  </data>
+  <data name="Lbl_3_Heading" xml:space="preserve">
+    <value>Total number of Bench and reserved decisions/judgments</value>
+  </data>
+  <data name="Lbl_4_1" xml:space="preserve">
+    <value>This time interval refers to the interval from the time a notice of appeal is filed (either as of right or after a motion for leave to appeal has been granted) to the time the appellant’s factum is filed and the appeal is ready to be set down for a hearing. The appeal is considered ready to be set down for a hearing on the date at which the appellant has done everything required by the rules of court to prepare an appeal for hearing (typically the serving and filing of the appeal book, transcripts and appellant’s factum). On references, the date the Order in Council or of the originating document is received will replace the notice of appeal date.</value>
+  </data>
+  <data name="Lbl_4_1_1" xml:space="preserve">
+    <value>Number of civil appeals where the interval from the notice of appeal to filing of the appellant’s factum took less than 6 months</value>
+  </data>
+  <data name="Lbl_4_1_2" xml:space="preserve">
+    <value>Number of civil appeals where the interval from the notice of appeal to filing of the appellant’s factum took between 6 to 12 months</value>
+  </data>
+  <data name="Lbl_4_1_3" xml:space="preserve">
+    <value>Number of civil appeals where the interval from the notice of appeal to filing of the appellant’s factum took more than 12 months</value>
+  </data>
+  <data name="Lbl_4_1_4" xml:space="preserve">
+    <value>Number of criminal appeals where the interval from the notice of appeal to filing of the appellant’s factum took less than 6 months for:</value>
+  </data>
+  <data name="Lbl_4_1_4_1" xml:space="preserve">
+    <value>Conviction/acquittal</value>
+  </data>
+  <data name="Lbl_4_1_CriminalCases" xml:space="preserve">
+    <value>Criminal cases</value>
+  </data>
+  <data name="Lbl_4_Heading" xml:space="preserve">
+    <value>Civil and criminal case time intervals</value>
+  </data>
+  <data name="Lbl_CivilCases" xml:space="preserve">
+    <value>Civil cases</value>
+  </data>
+  <data name="Lbl_CriminalCases" xml:space="preserve">
+    <value>Criminal cases</value>
+  </data>
+  <data name="Lbl_From" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="Lbl_To" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Tip_FromDate" xml:space="preserve">
+    <value>The start date of the period covered by the submission.</value>
+  </data>
+  <data name="Msg_FromDate" xml:space="preserve">
+    <value>Please enter From Date</value>
+  </data>
+  <data name="Tip_ToDate" xml:space="preserve">
+    <value>The end date of the period covered by the submission.</value>
+  </data>
+  <data name="Msg_ToDate" xml:space="preserve">
+    <value>Please enter To Date</value>
+  </data>
+  <data name="Msg_1_1_1" xml:space="preserve">
+    <value>Number of civil appeals, cross-appeals, references, and JRs filed but still pending as of December 31&lt;sup&gt;st&lt;/sup&gt; of the previous year</value>
+  </data>
+  <data name="Msg_1_1_2" xml:space="preserve">
+    <value>Number of civil appeals, cross-appeals, references, and JRs filed</value>
+  </data>
+  <data name="Msg_1_1_3" xml:space="preserve">
+    <value>Number of civil appeals, cross-appeals, references, and JRs disposed of by judgment</value>
+  </data>
+  <data name="Msg_1_1_4" xml:space="preserve">
+    <value>Number of civil appeals, cross-appeals, references, and JRs disposed of by the registrar, the case management officer or authorized personnel or by operation of the rules</value>
+  </data>
+  <data name="Tip_1_1_5" xml:space="preserve">
+    <value>To be included in this category, the settlement must have taken place at the time of judicial mediation and can include settlement, abandonment or withdrawal of the appeal at that time.</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="Msg_1_1_5" xml:space="preserve">
+    <value>Number of civil appeals, cross-appeals, references, and JRs settled by judicial mediation</value>
+  </data>
+  <data name="Tip_1_1_6" xml:space="preserve">
+    <value>These appeals, cross-appeals, references, and JRs are to include those that are abandoned, withdrawn, dismissed for want of prosecution, non-compliance with rules, dispositions by a single judge, etc. The civil appeals, cross-appeals, references, and JRs abandoned or withdrawn by the registrar take into account the certificates of lapse of appeal issued by the registry.</value>
+  </data>
+  <data name="Msg_1_1_6" xml:space="preserve">
+    <value>Number of civil appeals, cross-appeals, references, and JRs disposed of by other means</value>
+  </data>
+  <data name="Tip_1_1_7" xml:space="preserve">
+    <value>Previous year civil appeals, cross-appeals, references and JRs filed but still pending as of December 31&lt;sup&gt;st&lt;/sup&gt; of the previous year (1.1.1) plus new civil appeals, cross-appeals, references, and JRs filed (1.1.2) minus total number of civil appeals, cross-appeals, references, and JRs disposed of, settled by mediation, abandoned or withdrawn (1.1.3 to 1.1.6) = net civil appeals, cross-appeals, references, and JRs for the year.</value>
+  </data>
+  <data name="Msg_1_1_7" xml:space="preserve">
+    <value>Total number of civil appeals, cross-appeals, references, and JRs</value>
+  </data>
+  <data name="Tip_1_2_Checkbox" xml:space="preserve">
+    <value>Courts that hear conviction and sentence appeals together should check this box.</value>
+  </data>
+  <data name="Msg_1_2_1" xml:space="preserve">
+    <value>Number of civil appeals, cross-appeals, references, and JRs filed of criminal appeals, cross-appeals, references and bail reviews filed but still pending as of December 31&lt;sup&gt;st&lt;/sup&gt; of the previous year</value>
+  </data>
+  <data name="Tip_1_2_2" xml:space="preserve">
+    <value>The criminal appeals, cross-appeals, references and bail reviews filed involving the &lt;i&gt;Youth Criminal Justice Act&lt;/i&gt; are not to be separately tracked as such. They should be counted as any other criminal appeals, cross-appeals, references and bail reviews filed.</value>
+  </data>
+  <data name="Msg_1_2_2" xml:space="preserve">
+    <value>Number of civil appeals, cross-appeals, references, and JRs filed of criminal appeals, cross-appeals, references and bail reviews filed</value>
+  </data>
+  <data name="Tip_1_2_3" xml:space="preserve">
+    <value>The criminal appeals, cross-appeals, references and bail reviews disposed of by judgment involving the &lt;i&gt;Youth Criminal Justice Act&lt;/i&gt; are not to be tracked separately. They should be counted as any other criminal appeals, cross appeals, references and bail reviews disposed of.</value>
+  </data>
+  <data name="Msg_1_2_3" xml:space="preserve">
+    <value>Number of criminal appeals, cross-appeals, references and bail reviews disposed of by judgment</value>
+  </data>
+  <data name="Tip_1_2_4" xml:space="preserve">
+    <value>These appeals, cross-appeals, references and bail reviews are to include those that are settled by judicial facilitations, abandoned, withdrawn, dismissed for want of prosecution, non-compliance with rules, and disposed of by a single judge, etc.</value>
+  </data>
+  <data name="Msg_1_2_4" xml:space="preserve">
+    <value>Number of criminal appeals, cross-appeals, references and bail reviews disposed of by other means</value>
+  </data>
+  <data name="Tip_1_2_5" xml:space="preserve">
+    <value>Criminal appeals, cross-appeals, references and bail reviews filed but still pending as of December 31&lt;sup&gt;st&lt;/sup&gt; of the previous year (1.2.1) plus new criminal appeals, cross-appeals, references and bail reviews filed (1.2.2) minus total number of criminal appeals, cross-appeals, references and bail reviews disposed of, settled by judicial facilitations, abandoned or withdrawn (1.2.3 to 1.2.4) = net criminal appeals, cross-appeals, references and bail reviews for the year.</value>
+  </data>
+  <data name="Msg_1_2_5" xml:space="preserve">
+    <value>Total number of criminal appeals, cross-appeals, references and bail reviews</value>
+  </data>
+  <data name="Tip_2_1_1" xml:space="preserve">
+    <value>A decision given at hearing (also referred to as Bench decision) is a decision that is rendered immediately after the hearing, the same day of the hearing or during the same sitting week. If a decision is given at the hearing but the reasons follow the pronouncement, which means that the reasons are not provided immediately after the hearing, on the same day of the hearing or on the same sitting week of the hearing, this decision should be counted as a reserved judgment.</value>
+  </data>
+  <data name="Msg_2_1_1" xml:space="preserve">
+    <value>Number of civil appeals, cross-appeals, references, and JRs filed of civil case decisions given at hearing</value>
+  </data>
+  <data name="Tip_2_1_2" xml:space="preserve">
+    <value>A decision given after reserving is a decision that is rendered at a later date, i.e., not immediately after the hearing, not on the same day of the hearing and not during the same sitting week.</value>
+  </data>
+  <data name="Msg_2_1_2" xml:space="preserve">
+    <value>Number of civil case reserved decisions</value>
+  </data>
+  <data name="Tip_2_2_1" xml:space="preserve">
+    <value>A decision given at hearing (also referred to as Bench decision) is a decision that is rendered immediately after the hearing, the same day of the hearing or during the same sitting week. If a decision is given at the hearing but the reasons follow the pronouncement, which means that the reasons are not provided immediately after the hearing, on the same day of the hearing or on the same sitting week of the hearing, this decision should be counted as a reserved judgment.&lt;br /&gt;&lt;br /&gt;The decisions involving the &lt;i&gt;Youth Criminal Justice Act&lt;/i&gt; are not to be tracked separately. They should be counted as any other criminal appeal decision.</value>
+  </data>
+  <data name="Msg_2_2_1" xml:space="preserve">
+    <value>Number of criminal case decisions given at hearing</value>
+  </data>
+  <data name="Msg_2_2_1_1" xml:space="preserve">
+    <value>Number of convictions/acquittals given at hearing</value>
+  </data>
+  <data name="Msg_2_2_1_2" xml:space="preserve">
+    <value>Number of sentences given at hearing</value>
+  </data>
+  <data name="Tip_2_2_1_3" xml:space="preserve">
+    <value>Examples of other criminal appeals are habeas corpus, prohibition, certiorari, mental disorder reviews, etc.</value>
+  </data>
+  <data name="Msg_2_2_1_3" xml:space="preserve">
+    <value>Number of other criminal appeals given at hearing</value>
+  </data>
+  <data name="Tip_2_2_2" xml:space="preserve">
+    <value>A decision filed after reserving is a decision that is rendered at a later date i.e. not on the same day of the hearing or during the same sitting week. If a decision is given at the hearing but the reasons follow the pronouncement i.e., they are not provided immediately after the hearing, on the same day of the hearing or during the same sitting week, this decision should be counted as a reserved judgment.</value>
+  </data>
+  <data name="Msg_2_2_2" xml:space="preserve">
+    <value>Number of criminal case decisions filed after reserving</value>
+  </data>
+  <data name="Msg_2_2_2_1" xml:space="preserve">
+    <value>Number of convictions/acquittals filed after reserving</value>
+  </data>
+  <data name="Msg_2_2_2_2" xml:space="preserve">
+    <value>Number of sentences filed after reserving</value>
+  </data>
+  <data name="Tip_2_2_2_3" xml:space="preserve">
+    <value>Examples of criminal appeals are habeas corpus, prohibition, certiorari, mental disorder reviews.</value>
+  </data>
+  <data name="Msg_2_2_2_3" xml:space="preserve">
+    <value>Number of other criminal appeals filed after reserving</value>
+  </data>
+  <data name="Tip_3_1" xml:space="preserve">
+    <value>Bench decisions/judgments are also referred to as decisions given at hearing. A Bench decision or decision given at hearing is rendered immediately after the hearing, the same day of the hearing or during the same sitting week. The decisions involving the &lt;i&gt;Youth Criminal Justice Act&lt;/i&gt; are not to be tracked separately. They should be counted as any other decision/judgment.</value>
+  </data>
+  <data name="Msg_3_1" xml:space="preserve">
+    <value>Number of Bench decisions/judgments</value>
+  </data>
+  <data name="Tip_3_2" xml:space="preserve">
+    <value>A reserved decision is a decision that is rendered at a later date i.e. not immediately after the hearing, not on the same day of the hearing nor during the same sitting week. The decisions involving the &lt;i&gt;Youth Criminal Justice Act&lt;/i&gt; are not to be tracked separately. They should be counted as any other criminal appeal decision.</value>
+  </data>
+  <data name="Msg_3_2" xml:space="preserve">
+    <value>Number of reserved decisions/judgments</value>
+  </data>
+  <data name="Msg_4_1_1" xml:space="preserve">
+    <value>Number of civil appeals where the interval from the notice of appeal to filing of the appellant’s factum took less than 6 months</value>
+  </data>
+  <data name="Msg_4_1_2" xml:space="preserve">
+    <value>Number of civil appeals where the interval from the notice of appeal to filing of the appellant’s factum took between 6 to 12 months</value>
+  </data>
+  <data name="Msg_4_1_3" xml:space="preserve">
+    <value>Number of civil appeals where the interval from the notice of appeal to filing of the appellant’s factum took more than 12 months</value>
+  </data>
+  <data name="Msg_4_1_4_1" xml:space="preserve">
+    <value>Conviction/acquittal</value>
+  </data>
+  <data name="Result" xml:space="preserve">
+    <value>Submission</value>
+  </data>
+  <data name="Review1" xml:space="preserve">
+    <value>Review</value>
+  </data>
+  <data name="Sec4_41_Heading" xml:space="preserve">
+    <value>Notice of appeal to filing of the appellant’s factum</value>
+  </data>
+  <data name="Sec4_41_Tip" xml:space="preserve">
+    <value>This time interval refers to the interval from the time a notice of appeal is filed (either as of right or after a motion for leave to appeal has been granted) to the time the appellant’s factum is filed and the appeal is ready to be set down for a hearing. The appeal is considered ready to be set down for a hearing on the date at which the appellant has done everything required by the rules of court to prepare an appeal for hearing (typically the serving and filing of the appeal book, transcripts and appellant’s factum). On references, the date the Order in Council or of the originating document is received will replace the notice of appeal date.</value>
+  </data>
+  <data name="Sec4_42_Heading" xml:space="preserve">
+    <value>Filing of the appellant’s factum to hearing</value>
+  </data>
+  <data name="Sec4_42_Tip" xml:space="preserve">
+    <value>This time interval refers to the time required from the time the appellant’s factum is filed to the time the case is heard. The time the appeal is heard is the actual day of the appeal hearing and &lt;u&gt;not&lt;/u&gt; the scheduled date of hearing.&lt;br /&gt;&lt;br /&gt;Where the hearing consumes more than one day, use the first day of hearing for calculating the filing of the appellant’s factum to hearing time interval and the hearing to final decision time interval.</value>
+  </data>
+  <data name="Sec4_43_Heading" xml:space="preserve">
+    <value>Hearing to final decision</value>
+  </data>
+  <data name="Sec4_43_Tip" xml:space="preserve">
+    <value>This time interval refers to the time between the day of the hearing (actual day of hearing and &lt;u&gt;not&lt;/u&gt; the scheduled date of hearing) and the date of the decision/judgment.</value>
+  </data>
+  <data name="Tip_4_Heading" xml:space="preserve">
+    <value>Civil and criminal case statistics are to be collected for three time intervals: 1) Notice of appeal to filing of the appellant’s factum (or the equivalent document), 2) Filing of appellant’s factum to hearing, and 3) Hearing to final decision.&lt;br /&gt;&lt;br /&gt;For each of these time intervals, information will be gathered for three time periods: 1) Less than 6 months, 2) Between 6 to 12 months, and 3) More than 12 months.</value>
+  </data>
+  <data name="Tip_CriminalCases" xml:space="preserve">
+    <value>For criminal cases, the time intervals and time periods should be reported for each of the following three categories of criminal appeals: 1) Conviction/acquittal, 2) Sentence, and 3) Other.</value>
+  </data>
+  <data name="Tip_4_1_CriminalCases" xml:space="preserve">
+    <value>EN-For criminal cases, the time intervals and time periods should be reported for each of the following three categories of criminal appeals: 1) Conviction/acquittal, 2) Sentence, and 3) Other.</value>
+  </data>
+  <data name="Sec4_Heading" xml:space="preserve">
+    <value>(Civil and criminal case time intervals)</value>
+  </data>
+  <data name="Sec4_Heading_Tip" xml:space="preserve">
+    <value>(Civil and criminal case statistics are to be collected for three time intervals: 1) Notice of appeal to filing of the appellant’s factum (or the equivalent document), 2) Filing of appellant’s factum to hearing, and 3) Hearing to final decision.&lt;br /&gt;&lt;br /&gt;For each of these time intervals, information will be gathered for three time periods: 1) Less than 6 months, 2) Between 6 to 12 months, and 3) More than 12 months.)</value>
+  </data>
+  <data name="Sec4_411_Label" xml:space="preserve">
+    <value>(Number of civil appeals where the interval from the notice of appeal to filing of the appellant’s factum took less than 6 months)</value>
+  </data>
+  <data name="Sec4_412_Label" xml:space="preserve">
+    <value>(Number of civil appeals where the interval from the notice of appeal to filing of the appellant’s factum took between 6 to 12 months)</value>
+  </data>
+  <data name="Sec4_413_Label" xml:space="preserve">
+    <value>(Number of civil appeals where the interval from the notice of appeal to filing of the appellant’s factum took more than 12 months)</value>
+  </data>
+  <data name="Sec4_414_Label" xml:space="preserve">
+    <value>(Number of criminal appeals where the interval from the notice of appeal to filing of the appellant’s factum took less than 6 months for:)</value>
+  </data>
+  <data name="Sec4_415_Label" xml:space="preserve">
+    <value>(Number of criminal appeals where the interval from the notice of appeal to filing of the appellant’s factum took between 6 to 12 months for:)</value>
+  </data>
+  <data name="Sec4_416_Label" xml:space="preserve">
+    <value>Number of criminal appeals where the interval from the notice of appeal to filing of the appellant’s factum took more than 12 months for:</value>
+  </data>
+  <data name="Sec4_CivilCases" xml:space="preserve">
+    <value>Civil cases</value>
+  </data>
+  <data name="Sec4_CriminalCases" xml:space="preserve">
+    <value>Criminal cases</value>
+  </data>
+  <data name="Sec4_CriminalCases_Tip" xml:space="preserve">
+    <value>For criminal cases, the time intervals and time periods should be reported for each of the following three categories of criminal appeals: 1) Conviction/acquittal, 2) Sentence, and 3) Other.</value>
+  </data>
+  <data name="Sec4_421_Label" xml:space="preserve">
+    <value>Number of civil appeals where the time interval from filing of the appellant’s factum to the hearing took less than 6 months</value>
+  </data>
+  <data name="Sec4_422_Label" xml:space="preserve">
+    <value>Number of civil appeals where the time interval from filing of the appellant’s factum to the hearing took between 6 to 12 months</value>
+  </data>
+  <data name="Sec4_423_Label" xml:space="preserve">
+    <value>Number of civil appeals where the time interval from filing of the appellant’s factum to the hearing took more than 12 months</value>
+  </data>
+  <data name="Sec4_424_Label" xml:space="preserve">
+    <value>Number of criminal appeals where the time interval from filing of the appellant’s factum to the hearing took less than 6 months for:</value>
+  </data>
+  <data name="Sec4_425_Label" xml:space="preserve">
+    <value>Number of criminal appeals where the time interval from filing of the appellant’s factum to the hearing took between 6 to 12 months for:</value>
+  </data>
+  <data name="Sec4_426_Label" xml:space="preserve">
+    <value>Number of criminal appeals where the time interval from filing of the appellant’s factum to the hearing took more than 12 months for:</value>
+  </data>
+  <data name="Sec4_431_Label" xml:space="preserve">
+    <value>Number of civil appeals where the time interval from the hearing to the final decision took less than 6 months</value>
+  </data>
+  <data name="Sec4_432_Label" xml:space="preserve">
+    <value>Number of civil appeals where the time interval from the hearing to the final decision took between 6 to 12 months</value>
+  </data>
+  <data name="Sec4_433_Label" xml:space="preserve">
+    <value>Number of civil appeals where the time interval from the hearing to the final decision took more than 12 months</value>
+  </data>
+  <data name="Sec4_434_Label" xml:space="preserve">
+    <value>Number of criminal appeals where the time interval from the hearing to the final decision took less than 6 months for:</value>
+  </data>
+  <data name="Sec4_435_Label" xml:space="preserve">
+    <value>Number of criminal appeals where the time interval from the hearing to the final decision took between 6 to 12 months for:</value>
+  </data>
+  <data name="Sec4_436_Label" xml:space="preserve">
+    <value>Number of criminal appeals where the time interval from the hearing to the final decision took more than 12 months for:</value>
+  </data>
+  <data name="Sec4_Comments_Label" xml:space="preserve">
+    <value>Comments</value>
+  </data>
+  <data name="Sec5_Heading" xml:space="preserve">
+    <value>Number of in-person, virtual and hybrid hearings</value>
+  </data>
+  <data name="Sec5_Heading_Tip" xml:space="preserve">
+    <value>The number of hearings in this section are to be collected for &lt;u&gt;hearings by a panel of judges only&lt;/u&gt;.)</value>
+  </data>
+  <data name="Sec5_51_Label_Short" xml:space="preserve">
+    <value>In-person hearings</value>
+  </data>
+  <data name="Sec5_51_Tip" xml:space="preserve">
+    <value>Number of hearings held where all parties were present in court for the hearing. This description also includes situations where the counsel attended the hearing in-person but where the individual being represented attended remotely/virtually.</value>
+  </data>
+  <data name="Sec5_52_Label_Short" xml:space="preserve">
+    <value>Virtual hearings</value>
+  </data>
+  <data name="Sec5_52_Tip" xml:space="preserve">
+    <value>Number of hearings held where all parties attended the hearing remotely/virtually.</value>
+  </data>
+  <data name="Sec5_53_Label_Short" xml:space="preserve">
+    <value>Hybrid hearings</value>
+  </data>
+  <data name="Sec5_53_Tip" xml:space="preserve">
+    <value>Number of hearings held where one or more parties were present in court for the hearing and one or more parties attended the hearing remotely/virtually.</value>
+  </data>
+  <data name="Sec5_54_Label" xml:space="preserve">
+    <value>Total number of hearings held in-person, virtually and in hybrid mode</value>
+  </data>
+  <data name="Sec5_54_Tip" xml:space="preserve">
+    <value>This field is auto-populated using fields 5.1 to 5.3</value>
+  </data>
+  <data name="Sec6_Heading" xml:space="preserve">
+    <value>Number of motions and applications</value>
+  </data>
+  <data name="Sec6_Heading_Tip" xml:space="preserve">
+    <value>The number of motions and applications heard in chambers (single judge), in court (panels of three or more judges) and by registrars. In some jurisdictions, motions and applications can be heard by a master or other judicial officers.&lt;br /&gt;&lt;br /&gt;Motions and applications heard at the time of the hearing of an appeal are &lt;u&gt;not&lt;/u&gt; to be included. Motions and applications in writing should be included. Consent orders should also be included if judicial time is required to deal with them.&lt;br /&gt;&lt;br /&gt;With respect to applications for leave to appeal or leave to extend the time to appeal:&lt;br /&gt;&lt;br /&gt;1. Where leave is granted, these applications should be counted as both a motion heard and as an appeal filed and subsequently disposed of by judgment or by other means. Where the practice of the court is to open a new (second) file, count the motion heard only on the first file and the appeal filed on the second file, or&lt;br /&gt;&lt;br /&gt;2. Where only the motion or application is heard and leave is denied, these applications should be counted only as a motion heard by a motion judge or judges. However, when the entire appeal is heard and leave is denied by an appellate panel, then these applications should be counted only as an appeal disposed of by other means.</value>
+  </data>
+  <data name="Sec6_61_Label" xml:space="preserve">
+    <value>Motions and applications heard by a single judge</value>
+  </data>
+  <data name="Sec6_62_Label" xml:space="preserve">
+    <value>Motions and applications heard by a panel of three or more judges</value>
+  </data>
+  <data name="Sec6_63_Label" xml:space="preserve">
+    <value>Motions and applications heard by a registrar</value>
+  </data>
+  <data name="Sec6_611_Label" xml:space="preserve">
+    <value>Number of motions and applications filed before a single judge</value>
+  </data>
+  <data name="Sec6_612_Label" xml:space="preserve">
+    <value>Number of motions and applications disposed of by order of a single judge</value>
+  </data>
+  <data name="Sec6_613_Label" xml:space="preserve">
+    <value>Number of motions and applications before a single judge that were abandoned, withdrawn or dismissed administratively</value>
+  </data>
+  <data name="Sec6_613_Tip" xml:space="preserve">
+    <value>Examples of dismissed administratively include dismissed for want of prosecution, non-compliance with rules, applications where leave is denied, etc.</value>
+  </data>
+  <data name="Sec6_621_Label" xml:space="preserve">
+    <value>Number of motions and applications filed before a panel of three or more judges</value>
+  </data>
+  <data name="Sec6_622_Label" xml:space="preserve">
+    <value>Number of motions and applications disposed of by order of a panel of three or more judges</value>
+  </data>
+  <data name="Sec6_623_Label" xml:space="preserve">
+    <value>Number of panel motions and applications that were abandoned, withdrawn or dismissed administratively</value>
+  </data>
+  <data name="Sec6_623_Tip" xml:space="preserve">
+    <value>Examples of dismissed administratively include dismissed for want of prosecution, non-compliance with rules, applications where leave is denied, etc.</value>
+  </data>
+  <data name="Sec6_631_Label" xml:space="preserve">
+    <value>Number of motions and applications filed before a registrar</value>
+  </data>
+  <data name="Sec6_632_Label" xml:space="preserve">
+    <value>Number of motions and applications disposed of by order of a registrar</value>
+  </data>
+  <data name="Sec6_633_Label" xml:space="preserve">
+    <value>Number of panel motions and applications that were abandoned, withdrawn or dismissed by a registrar or for administrative reasons</value>
+  </data>
+  <data name="Sec6_633_Tip" xml:space="preserve">
+    <value>Examples of administrative reasons include dismissed for want of prosecution, non-compliance with rules, applications where leave is denied, etc.</value>
+  </data>
+  <data name="Sec7_Heading" xml:space="preserve">
+    <value>Self-Represented Litigants (SRLs)</value>
+  </data>
+  <data name="Sec7_Heading_Tip" xml:space="preserve">
+    <value>An SRL is a person who appears in court without representation from a lawyer. The litigant is not to be considered an SRL if the court has appointed counsel to assist the litigant.&lt;br /&gt;&lt;br /&gt;The number of appeals and the number of motions involving an SRL is &lt;u&gt;only&lt;/u&gt; collected at the hearing. For example, if a person is represented by a lawyer at the filing stage of an appeal or motion but is not represented at the hearing, the appeal or motion is considered an SRL case.</value>
+  </data>
+  <data name="Sec7_711_Label" xml:space="preserve">
+    <value>Number of appeals involving an SRL at the hearing of the appeal on the merits</value>
+  </data>
+  <data name="Sec7_712_Label" xml:space="preserve">
+    <value>Number of motions and applications involving an SRL at the hearing of a motion or an application (by a single judge, a panel or the registrar)</value>
+  </data>
+  <data name="Sec7_712_Tip" xml:space="preserve">
+    <value>Motions and applications heard at the time of the hearing of an appeal are &lt;u&gt;not&lt;/u&gt; to be included.</value>
+  </data>
+  <data name="Sec7_713_Label" xml:space="preserve">
+    <value>Total number of appeals, motions and applications involving an SRL at the hearing</value>
+  </data>
+  <data name="Sec7_713_Tip" xml:space="preserve">
+    <value>This field is auto-populated using fields 7.1.1 and 7.1.2.</value>
+  </data>
+  <data name="Sec8_Heading" xml:space="preserve">
+    <value>Number of decisions/judgments rendered</value>
+  </data>
+  <data name="Sec8_81_Label" xml:space="preserve">
+    <value>Less than 6 months</value>
+  </data>
+  <data name="Sec8_82_Label" xml:space="preserve">
+    <value>Between 6 to 12 months</value>
+  </data>
+  <data name="Sec8_83_Label" xml:space="preserve">
+    <value>More than 12 months</value>
+  </data>
+  <data name="Sec8_Decision_Tip" xml:space="preserve">
+    <value>Number of decisions related to civil and criminal cases that are rendered based on the selected time period from the hearing date. The cases involving the &lt;i&gt;Youth Criminal Justice Act&lt;/i&gt; are not to be tracked separately. They should be counted as any other decision rendered.</value>
+  </data>
+  <data name="Sec9_Heading" xml:space="preserve">
+    <value>Number of appeals that are heard</value>
+  </data>
+  <data name="Sec9_91_Label" xml:space="preserve">
+    <value>By a 3-member panel hearings</value>
+  </data>
+  <data name="Sec9_92_Label" xml:space="preserve">
+    <value>By a 5-member panel hearings</value>
+  </data>
+  <data name="Sec10_Heading" xml:space="preserve">
+    <value>Total number of appeals, cross-appeals, references, bail reviews and JRs pending on December 31&lt;sup&gt;st&lt;/sup&gt;</value>
+  </data>
+  <data name="Sec10_Heading_Tooltip" xml:space="preserve">
+    <value>Explanation text for pending inventory measured as of December 31&lt;sup&gt;st&lt;/sup&gt;, including heard and unheard matters.</value>
+  </data>
+  <data name="Sec10_101_Label" xml:space="preserve">
+    <value>Number of appeals, cross-appeals, references, bail reviews and JRs that have not been finalized as of December 31&lt;sup&gt;st&lt;/sup&gt;</value>
+  </data>
+  <data name="Sec10_101_Label_Plain" xml:space="preserve">
+    <value>Number of appeals, cross-appeals, references, bail reviews and JRs that have not been finalized as of December 31st</value>
+  </data>
+  <data name="Sec11_111_DataMsg" xml:space="preserve">
+    <value>Regular judges</value>
+  </data>
+  <data name="Sec11_Heading" xml:space="preserve">
+    <value>Number of judges (as of December 31&lt;sup&gt;st&lt;/sup&gt;)</value>
+  </data>
+  <data name="Sec11_111_Label" xml:space="preserve">
+    <value>Regular judges</value>
+  </data>
+  <data name="Sec11_111_Tooltip" xml:space="preserve">
+    <value>Number of judges of the court as of December 31st that have not elected a supernumerary status and have regular judicial duties.</value>
+  </data>
+  <data name="Sec11_112_DataMsg" xml:space="preserve">
+    <value>Supernumerary judges</value>
+  </data>
+  <data name="Sec11_112_Label" xml:space="preserve">
+    <value>Supernumerary judges</value>
+  </data>
+  <data name="Sec11_112_Tooltip" xml:space="preserve">
+    <value>Number of judges of the court as of December 31st that hold office as supernumerary judges as per section 28 of the Judges Act.</value>
+  </data>
+  <data name="Sec12_Heading" xml:space="preserve">
+    <value>Additional comments</value>
+  </data>
+  <data name="Sec12_Heading_Tooltip" xml:space="preserve">
+    <value>Comments should only be used on an exceptional basis. A true anomaly is a situation that considerably deviates from what is considered normal or expected.</value>
+  </data>
+  <data name="btn_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="btn_NextTab" xml:space="preserve">
+    <value>Next Tab</value>
+  </data>
+  <data name="btnReviewStats" xml:space="preserve">
+    <value>Review Stats</value>
+  </data>
+  <data name="AlertRecordAlreadyCompleted" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="Select1" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="Sec8_Decision1_Tip" xml:space="preserve">
+    <value>Number of decisions related to civil and criminal cases that are rendered in less than 6 months from the hearing date. The cases involving the &lt;i&gt;Youth Criminal Justice Act&lt;/i&gt; are not to be tracked separately. They should be counted as any other decision rendered.</value>
+  </data>
+  <data name="Sec8_Decision2_Tip" xml:space="preserve">
+    <value>Number of decisions related to civil and criminal cases that are rendered between 6 to 12 months from the hearing date. The cases involving the &lt;i&gt;Youth Criminal Justice Act&lt;/i&gt; are not to be tracked separately. They should be counted as any other decision rendered.</value>
+  </data>
+  <data name="Sec8_Decision3_Tip" xml:space="preserve">
+    <value>Number of decisions related to civil and criminal cases that are rendered in more than 12 months from the hearing date. The cases involving the &lt;i&gt;Youth Criminal Justice Act&lt;/i&gt; are not to be tracked separately. They should be counted as any other decision rendered.</value>
+  </data>
+  <data name="ReviewTab12Msg" xml:space="preserve">
+    <value>To review and submit your statistics, please click on the Review Statistics button below</value>
+  </data>
+</root>

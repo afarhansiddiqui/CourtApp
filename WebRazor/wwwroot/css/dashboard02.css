@@ -1,0 +1,33 @@
+/* Dashboard page CSS */
+
+body {
+    background-color: #f5f6fa;
+    font-family: Segoe UI,Times,Times New Roman,serif;
+    font-size: 18px;
+}
+
+/* Header styling */
+header {
+  background-color: #022a5e;
+}
+
+header h4 {
+  color: white;
+  margin: 0;
+}
+
+header .btn {
+  color: white;
+  border-color: white;
+}
+
+/* Main dashboard area */
+.dashboard-container {
+  padding: 2rem;
+}
+
+    .dashboard-container .card-placeholder {
+        text-align: center;
+        padding: 5rem;
+        background-color: #f5f6fa;
+    }

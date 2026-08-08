@@ -1,0 +1,84 @@
+﻿@using Microsoft.AspNetCore.Components
+@using System.Security.Claims
+@using WebRazor.Models
+@using Microsoft.AspNetCore.Http.Extensions;
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+<!DOCTYPE html>
+<html class="no-js" lang="@CultureInfo.CurrentCulture.ToString()" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>
+        App
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="alternate" hreflang="fr" href="index-fr.html">
+    <link rel="stylesheet" href="~/lib/fontawesome-7.0.1/css/all.css">
+    <!-- Bootstrap CSS -->
+    <link href="~/lib/bootstrap-5.3.8-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="~/lib/bootstrap-5.3.8-dist/css/bootstrap-grid.css" rel="stylesheet">
+    <link href="~/lib/bootstrap-5.3.8-dist/css/bootstrap-reboot.css" rel="stylesheet">
+    <link href="~/lib/bootstrap-5.3.8-dist/css/bootstrap-utilities.css" rel="stylesheet">
+
+    <!-- External CSS -->
+    @* <link rel="stylesheet" href="~/css/dashboard02.css"> *@
+    <link rel="stylesheet" href="~/css/site.css">
+</head>
+<body class="bg-page" vocab="http://schema.org/" resource="#wb-webpage" typeof="WebPage" onload="focusOnForm('@TempData["sectionId"]');">
+    @{
+        var CurrentPageEn = "";
+        var CurrentPageFr = "";
+        var url = this.Context.Request.GetDisplayUrl();
+        if (this.Context.Request.Query.Count < 2)
+        {
+            url = this.Context.Request.GetDisplayUrl().Replace("?culture=en", "").Replace("?culture=fr", "");
+            CurrentPageEn = url + "?culture=en";
+            CurrentPageFr = url + "?culture=fr";
+        }
+        else if (this.Context.Request.Query.Count > 1)
+        {
+            url = this.Context.Request.GetDisplayUrl().Replace("&culture=en", "").Replace("&culture=fr", "");
+            CurrentPageEn = url + "&culture=en";
+            CurrentPageFr = url + "&culture=fr";
+        }
+
+        // var userEmail = User.FindFirstValue(ClaimTypes.Name)
+        // ?? User.FindFirstValue("name")    // OpenID Connect / some providers
+        // ?? User.FindFirstValue(ClaimTypes.NameIdentifier)
+        // ?? User.FindFirstValue("subject");    // JWT subject
+        var userEmail = "abc";
+        var emailAddress = "";
+        if (!string.IsNullOrEmpty(userEmail))
+        {
+            emailAddress = userEmail + "@example.com";
+        }
+    }
+
+    <!-- HEADER -->
+    <header class="py-3 px-4 d-flex justify-content-between align-items-center">
+        <h4 class="text-white m-0"><a href="/Index" class="custom-link">App</a></h4>
+        <span class="align-items-end text-white">
+            Welcome @emailAddress
+            <a href="../Index" class="btn btn-danger ms-auto">@Localizer["SignOut"]</a>
+        </span>
+    </header>
+
+    <!-- MAIN DASHBOARD AREA -->
+    <main class="dashboard-container">
+        <div class="container">
+            <div class="text-center bg-white georgia-font">
+
+                <p class="text-muted">@RenderBody()</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="~/lib/bootstrap-5.3.8-dist/js/bootstrap.bundle.js"></script>
+    @* <script src="~/lib/fontawesome-7.0.1/js/all.js"></script> *@
+    <script src="~/js/site.js"></script>
+</body>
+</html>

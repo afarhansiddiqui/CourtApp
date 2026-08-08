@@ -1,0 +1,13 @@
+C:\CAS\BusinessLayer\bin\Debug\net8.0\BusinessLayer.deps.json
+C:\CAS\BusinessLayer\bin\Debug\net8.0\BusinessLayer.dll
+C:\CAS\BusinessLayer\bin\Debug\net8.0\BusinessLayer.pdb
+C:\CAS\BusinessLayer\obj\Debug\net8.0\BusinessLayer.csproj.AssemblyReference.cache
+C:\CAS\BusinessLayer\obj\Debug\net8.0\BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\CAS\BusinessLayer\obj\Debug\net8.0\BusinessLayer.AssemblyInfoInputs.cache
+C:\CAS\BusinessLayer\obj\Debug\net8.0\BusinessLayer.AssemblyInfo.cs
+C:\CAS\BusinessLayer\obj\Debug\net8.0\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\CAS\BusinessLayer\obj\Debug\net8.0\BusinessLayer.sourcelink.json
+C:\CAS\BusinessLayer\obj\Debug\net8.0\BusinessLayer.dll
+C:\CAS\BusinessLayer\obj\Debug\net8.0\refint\BusinessLayer.dll
+C:\CAS\BusinessLayer\obj\Debug\net8.0\BusinessLayer.pdb
+C:\CAS\BusinessLayer\obj\Debug\net8.0\ref\BusinessLayer.dll
