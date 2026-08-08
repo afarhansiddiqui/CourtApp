@@ -17,30 +17,6 @@ Program p = new Program();
 
 var builder = WebApplication.CreateBuilder(args);
 
-//// Add authentication
-//builder.Services
-//    .AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
-//    .AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("AzureAd"));
-//builder.Services.Configure<OpenIdConnectOptions>(
-
-//    OpenIdConnectDefaults.AuthenticationScheme,
-
-//    options =>
-
-//    {
-
-//        options.ResponseType = "code";
-
-//    });
-
-//builder.Services.AddAuthorization(options =>
-//{
-//    options.FallbackPolicy = options.DefaultPolicy;
-//});
-
-//builder.Services.AddControllersWithViews()
-//    .AddMicrosoftIdentityUI();
-
 // Add services to the container.
 builder.Services.AddServerSideBlazor();
 builder.Services.AddRazorPages();
@@ -84,20 +60,15 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-//app.UseAuthentication();
-//app.UseAuthorization();
-
 app.MapControllers();
 
 app.MapDefaultControllerRoute();
 
 app.MapRazorPages();
 
-
-
-
 var localizationOptions = app.Services.GetService<IOptions<RequestLocalizationOptions>>()?.Value
     ?? throw new InvalidOperationException("RequestLocalizationOptions are not configured.");
+
 app.UseRequestLocalization(localizationOptions);
 
 app.MapRazorPages();
